@@ -1,6 +1,6 @@
 # ANDROID STUDY JAMS
 
-Community App of Google Developer Student Club @ PHCET
+Community App of Google Developer Student Club @ IPSA
 
 <!--[![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)-->
 [![GitHub stars](https://img.shields.io/github/stars/DSC-PHCET/gdsc-android-app?style=social)](https://github.com/DSC-PHCET/gdsc-android-app/stargazers)
@@ -68,8 +68,8 @@ This project proposes a "Community Android Application" to accumulate all the In
 <table>
    <tr>
       <td>
-         <a href = "https://github.com/DSC-PHCET/gdsc-android-app/graphs/contributors">
-         <img src = "https://contrib.rocks/image?repo=DSC-PHCET/gdsc-android-app"/>
+         <a href = "https://github.com/MohitGupta121/gdsc-android-ipsa/graphs/contributors">
+         <img src = "https://contrib.rocks/image?repo=MohitGupta121/gdsc-android-ipsa"/>
          </a>
       </td>
    </tr>
