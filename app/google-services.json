@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1060248259453",
+    "firebase_url": "https://gdsc-phcet-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "gdsc-phcet",
+    "storage_bucket": "gdsc-phcet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060248259453:android:aa0fab1d807acdbc849a14",
+        "android_client_info": {
+          "package_name": "com.finite.gdscphcet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1060248259453-d3jo9olnr3la3ma51s251vbge2onkdm2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.finite.gdscphcet",
+            "certificate_hash": "67b953280b3d06613512a2fb444029a87b98dd66"
+          }
+        },
+        {
+          "client_id": "1060248259453-qvcga0i225kd8abli1s34uj8hcdvkbfc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADKmrBKW3nt3tkSA2OKMRRj1skHOt8_yI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1060248259453-qvcga0i225kd8abli1s34uj8hcdvkbfc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
