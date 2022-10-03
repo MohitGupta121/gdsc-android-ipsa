@@ -1,4 +1,4 @@
-package com.example.gdscipsa
+package com.mohit.gdsc.ipsacademy
 
 import org.junit.Test
 

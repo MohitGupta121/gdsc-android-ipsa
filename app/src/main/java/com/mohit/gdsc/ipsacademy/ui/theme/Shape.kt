@@ -1,4 +1,4 @@
-package com.example.gdscipsa.ui.theme
+package com.mohit.gdsc.ipsacademy.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
