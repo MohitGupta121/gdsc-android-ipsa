@@ -1,4 +1,4 @@
-# ANDROID STUDY JAMS
+# ANDROID STUDY JAMS (Compose Camp)
 
 Community App of Google Developer Student Club @ IPSA
 
