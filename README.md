@@ -3,8 +3,8 @@
 Community App of Google Developer Student Club @ IPSA
 
 <!--[![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)-->
-[![GitHub stars](https://img.shields.io/github/stars/DSC-PHCET/gdsc-android-app?style=social)](https://github.com/DSC-PHCET/gdsc-android-app/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/DSC-PHCET/gdsc-android-app?style=social)](https://github.com/DSC-PHCET/gdsc-android-app/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/MohitGupta121/gdsc-android-ipsa?style=social)](https://github.com/MohitGupta121/gdsc-android-ipsa/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/MohitGupta121/gdsc-android-ipsa?style=social)](https://github.com/MohitGupta121/gdsc-android-ipsa/network/members)
 
 <b> Problem Statement: </b>
 
