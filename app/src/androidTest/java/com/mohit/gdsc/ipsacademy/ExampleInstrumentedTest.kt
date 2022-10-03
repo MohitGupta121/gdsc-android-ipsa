@@ -1,4 +1,4 @@
-package com.example.gdscipsa
+package com.mohit.gdsc.ipsacademy
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

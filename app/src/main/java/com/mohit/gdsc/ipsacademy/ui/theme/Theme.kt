@@ -1,4 +1,4 @@
-package com.example.gdscipsa.ui.theme
+package com.mohit.gdsc.ipsacademy.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
