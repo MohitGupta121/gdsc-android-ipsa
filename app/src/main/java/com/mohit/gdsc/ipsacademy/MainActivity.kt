@@ -88,7 +88,9 @@ fun Navigation() {
 
         topBar = {
 
-            TopAppBar(backgroundColor = Color.White, modifier = Modifier.height(80.dp).fillMaxWidth(), title = {
+            TopAppBar(backgroundColor = Color.White, modifier = Modifier
+                .height(80.dp)
+                .fillMaxWidth(), title = {
                 Column() {
                     Row() {
                         Text(text = "Developer Student Club", fontSize = 25.sp, color = Color.Black)
@@ -168,14 +170,7 @@ fun Navigation() {
 
 @Composable
 fun home() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(text = "home")
-    }
-
+homeFragmentUI()
 
 }
 
