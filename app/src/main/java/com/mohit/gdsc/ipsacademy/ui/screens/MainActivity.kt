@@ -1,4 +1,4 @@
-package com.mohit.gdsc.ipsacademy
+package com.mohit.gdsc.ipsacademy.ui.screens
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -30,6 +30,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.mohit.gdsc.ipsacademy.R
+import com.mohit.gdsc.ipsacademy.homeFragmentUI
 import com.mohit.gdsc.ipsacademy.ui.theme.GDSCIPSATheme
 import com.mohit.gdsc.ipsacademy.ui.theme.NavigationItem
 
