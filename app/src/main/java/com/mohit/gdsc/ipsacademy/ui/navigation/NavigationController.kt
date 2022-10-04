@@ -1,4 +1,4 @@
-package com.mohit.gdsc.ipsacademy.ui.screens.Navigation
+package com.mohit.gdsc.ipsacademy.ui.navigation
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -30,9 +30,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.mohit.gdsc.ipsacademy.R
-import com.mohit.gdsc.ipsacademy.homeFragmentUI
-import com.mohit.gdsc.ipsacademy.ui.screens.homeScreen.ContentofAboutus
-import com.mohit.gdsc.ipsacademy.ui.screens.homeScreen.GoogleLine
+import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.ContentOfAboutUs
+import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.GoogleLine
+import com.mohit.gdsc.ipsacademy.ui.screens.homeScreen.HomeFragmentUI
 
 
 @Composable
@@ -43,11 +43,11 @@ fun NavigationController(navController: NavHostController) {
             home()
         }
 
-        composable(NavigationItem.aboutus.rout) {
-            aboutus()
+        composable(NavigationItem.AboutUs.rout) {
+            aboutUs()
         }
 
-        composable(NavigationItem.team.rout) {
+        composable(NavigationItem.Team.rout) {
             team()
         }
 
@@ -63,9 +63,9 @@ fun Navigation() {
     val navController = rememberNavController()
 
     val items = listOf(
-        NavigationItem.aboutus,
+        NavigationItem.AboutUs,
         NavigationItem.Home,
-        NavigationItem.team
+        NavigationItem.Team
     )
 
     Scaffold(
@@ -159,14 +159,14 @@ fun Navigation() {
 
 @Composable
 fun home() {
-    homeFragmentUI()
+    HomeFragmentUI()
 
 }
 
 
 @Composable
-fun aboutus() {
-    ContentofAboutus()
+fun aboutUs() {
+    ContentOfAboutUs()
 }
 
 @Composable

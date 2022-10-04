@@ -1,9 +1,8 @@
-package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
+package com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen
 
 import android.content.Intent
 import android.net.Uri
 import android.view.Gravity
-import android.widget.Toast
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -50,7 +49,7 @@ import com.mohit.gdsc.ipsacademy.data.models.SocialMediaDetails
 import com.mohit.gdsc.ipsacademy.data.models.TechnologyStack
 import com.mohit.gdsc.ipsacademy.data.models.TechnologyStackDetails
 import com.mohit.gdsc.ipsacademy.data.models.socialmedia
-
+import com.mohit.gdsc.ipsacademy.ui.theme.GDSCGreen
 
 @Composable
 fun GoogleAnimation(modifier: Modifier = Modifier
@@ -71,7 +70,7 @@ fun GoogleAnimation(modifier: Modifier = Modifier
     }
 }
 @Composable
-fun CardViewContentAboutus(){
+fun CardViewContentAboutUs(){
     val context = LocalContext.current
     val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse("https://gdsc.community.dev/ips-academy-indore/")) }
     Card(
@@ -136,7 +135,7 @@ fun CardViewContentForJoinCommunity(){
             )
             Row(horizontalArrangement = Arrangement.Start) {
                 Button(onClick = {context.startActivity(intent)},
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.Green)
+                    colors = ButtonDefaults.buttonColors(backgroundColor = GDSCGreen)
                     ,modifier=Modifier.padding(horizontal = 15.dp) ) {
                     Text(text = "BECOME A MEMBER", color = Color.White)
                 }
@@ -296,9 +295,9 @@ fun EventsWeConduct(){
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun SocialCard(socialmedia: socialmedia) {
+fun SocialCard(socialMedia: socialmedia) {
     val context = LocalContext.current
-    val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(socialmedia.link)) }
+    val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(socialMedia.link)) }
 
     Card(
         modifier = Modifier
@@ -314,7 +313,7 @@ fun SocialCard(socialmedia: socialmedia) {
 
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Image( painter = painterResource(id = socialmedia.image), contentDescription = socialmedia.link, modifier = Modifier.fillMaxSize())
+            Image( painter = painterResource(id = socialMedia.image), contentDescription = socialMedia.link, modifier = Modifier.fillMaxSize())
         }
     }
 }
@@ -328,7 +327,7 @@ fun SocialMediaContent() {
         items(
             employees
         ) {
-            SocialCard(socialmedia = it)
+            SocialCard(socialMedia = it)
         }
     }
 }

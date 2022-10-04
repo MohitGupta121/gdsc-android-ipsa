@@ -1,4 +1,4 @@
-package com.mohit.gdsc.ipsacademy
+package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
 
 import android.content.Intent
 import android.net.Uri
@@ -30,6 +30,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.mohit.gdsc.ipsacademy.EventsDetails
+import com.mohit.gdsc.ipsacademy.FutureEventDetails
+import com.mohit.gdsc.ipsacademy.PastEventDetails
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -129,12 +132,12 @@ fun FutureEventsDetailsCard(eventDetails: EventsDetails) {
 @Composable
 fun PastEventsDetailsDetailsContent() {
 
-    val Events = remember { FutureEventDetails.EventsDetailsLists }
+    val events = remember { FutureEventDetails.EventsDetailsLists }
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
         items(
-            Events
+            events
         ) {
             UpcomingEventsDetailsCard(eventDetails = it)
         }
@@ -145,12 +148,12 @@ fun PastEventsDetailsDetailsContent() {
 @Composable
 fun FutureEventsDetailsDetailsContent() {
 
-    val Events = remember { PastEventDetails.EventsDetailsLists }
+    val events = remember { PastEventDetails.EventsDetailsLists }
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
         items(
-            Events
+            events
         ) {
             FutureEventsDetailsCard(eventDetails = it)
         }

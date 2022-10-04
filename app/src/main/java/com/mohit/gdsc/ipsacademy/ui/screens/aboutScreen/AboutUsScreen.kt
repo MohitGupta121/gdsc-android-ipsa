@@ -1,4 +1,4 @@
-package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
+package com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,12 +11,13 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.*
 
 @Composable
-fun ContentofAboutus(){
+fun ContentOfAboutUs() {
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
         GoogleAnimation()
-        CardViewContentAboutus()
+        CardViewContentAboutUs()
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
             SocialMediaContent()
         }

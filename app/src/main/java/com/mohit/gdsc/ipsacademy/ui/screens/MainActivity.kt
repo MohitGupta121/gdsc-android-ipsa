@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
 import androidx.compose.ui.Modifier
-import com.mohit.gdsc.ipsacademy.ui.screens.Navigation.Navigation
+import com.mohit.gdsc.ipsacademy.ui.navigation.Navigation
 import com.mohit.gdsc.ipsacademy.ui.theme.GDSCIPSATheme
 
 class MainActivity : ComponentActivity() {
