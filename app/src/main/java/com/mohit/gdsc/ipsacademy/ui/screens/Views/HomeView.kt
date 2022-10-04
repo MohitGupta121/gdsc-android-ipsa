@@ -21,7 +21,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -34,7 +33,7 @@ import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun EventsDetailsCard(eventDetails: EventsDetails) {
+fun UpcomingEventsDetailsCard(eventDetails: EventsDetails) {
     val context = LocalContext.current
     val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(eventDetails.Url)) }
     Card(
@@ -130,14 +129,14 @@ fun FutureEventsDetailsCard(eventDetails: EventsDetails) {
 @Composable
 fun PastEventsDetailsDetailsContent() {
 
-    val employees = remember { FutureEventDetails.EventsDetailsLists }
+    val Events = remember { FutureEventDetails.EventsDetailsLists }
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
         items(
-            employees
+            Events
         ) {
-            EventsDetailsCard(eventDetails = it)
+            UpcomingEventsDetailsCard(eventDetails = it)
         }
     }
 }
@@ -146,12 +145,12 @@ fun PastEventsDetailsDetailsContent() {
 @Composable
 fun FutureEventsDetailsDetailsContent() {
 
-    val employees = remember { PastEventDetails.EventsDetailsLists }
+    val Events = remember { PastEventDetails.EventsDetailsLists }
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
         items(
-            employees
+            Events
         ) {
             FutureEventsDetailsCard(eventDetails = it)
         }
