@@ -1,4 +1,4 @@
-package com.mohit.gdsc.ipsacademy
+package com.mohit.gdsc.ipsacademy.ui.screens
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -30,6 +30,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.mohit.gdsc.ipsacademy.R
+import com.mohit.gdsc.ipsacademy.homeFragmentUI
 import com.mohit.gdsc.ipsacademy.ui.theme.GDSCIPSATheme
 import com.mohit.gdsc.ipsacademy.ui.theme.NavigationItem
 
@@ -88,7 +90,9 @@ fun Navigation() {
 
         topBar = {
 
-            TopAppBar(backgroundColor = Color.White, modifier = Modifier.height(80.dp).fillMaxWidth(), title = {
+            TopAppBar(backgroundColor = Color.White, modifier = Modifier
+                .height(80.dp)
+                .fillMaxWidth(), title = {
                 Column() {
                     Row() {
                         Text(text = "Developer Student Club", fontSize = 25.sp, color = Color.Black)
@@ -168,14 +172,7 @@ fun Navigation() {
 
 @Composable
 fun home() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(text = "home")
-    }
-
+homeFragmentUI()
 
 }
 

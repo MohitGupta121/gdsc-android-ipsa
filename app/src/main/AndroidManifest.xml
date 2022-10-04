@@ -12,9 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GDSCIPSA"
         tools:targetApi="31">
-        <activity android:name=".CertificateVerificationActivity"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.screens.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.GDSCIPSA">
