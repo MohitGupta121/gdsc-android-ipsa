@@ -1,4 +1,4 @@
-package com.mohit.gdsc.ipsacademy
+package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
 
 import android.content.Intent
 import android.net.Uri
@@ -21,7 +21,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -31,10 +30,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.mohit.gdsc.ipsacademy.EventsDetails
+import com.mohit.gdsc.ipsacademy.FutureEventDetails
+import com.mohit.gdsc.ipsacademy.PastEventDetails
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun EventsDetailsCard(eventDetails: EventsDetails) {
+fun UpcomingEventsDetailsCard(eventDetails: EventsDetails) {
     val context = LocalContext.current
     val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(eventDetails.Url)) }
     Card(
@@ -130,14 +132,14 @@ fun FutureEventsDetailsCard(eventDetails: EventsDetails) {
 @Composable
 fun PastEventsDetailsDetailsContent() {
 
-    val employees = remember { FutureEventDetails.EventsDetailsLists }
+    val events = remember { FutureEventDetails.EventsDetailsLists }
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
         items(
-            employees
+            events
         ) {
-            EventsDetailsCard(eventDetails = it)
+            UpcomingEventsDetailsCard(eventDetails = it)
         }
     }
 }
@@ -146,12 +148,12 @@ fun PastEventsDetailsDetailsContent() {
 @Composable
 fun FutureEventsDetailsDetailsContent() {
 
-    val employees = remember { PastEventDetails.EventsDetailsLists }
+    val events = remember { PastEventDetails.EventsDetailsLists }
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
         items(
-            employees
+            events
         ) {
             FutureEventsDetailsCard(eventDetails = it)
         }
