@@ -13,4 +13,8 @@ class HomeScreenViewModel (
         emit(repository.fetchPastEvents())
     }
 
+    val upcomingEvents = liveData(Dispatchers.IO) {
+        emit(repository.fetchUpcomingEvents())
+    }
+
 }

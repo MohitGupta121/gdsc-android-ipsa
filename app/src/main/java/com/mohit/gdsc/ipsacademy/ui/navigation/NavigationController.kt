@@ -30,7 +30,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.mohit.gdsc.ipsacademy.R
-import com.mohit.gdsc.ipsacademy.data.models.PastEventModel
 import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.ContentOfAboutUs
 import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.GoogleLine
 import com.mohit.gdsc.ipsacademy.ui.screens.homeScreen.HomeFragmentUI
