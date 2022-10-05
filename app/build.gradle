@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -76,5 +77,12 @@ dependencies {
     def nav_version = "2.5.2"
     implementation "androidx.navigation:navigation-compose:$nav_version"
     implementation "com.airbnb.android:lottie-compose:5.2.0"
+
+    implementation "io.coil-kt:coil-compose:2.1.0"
+    def glide = "4.11.0"
+    implementation "com.github.bumptech.glide:glide:$glide"
+    kapt "com.github.bumptech.glide:compiler:$glide"
+
+
 
 }
