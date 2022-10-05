@@ -15,24 +15,10 @@ import com.mohit.gdsc.ipsacademy.ui.theme.GDSCIPSATheme
 
 class MainActivity : ComponentActivity() {
 
-    private lateinit var viewModel: HomeScreenViewModel
-    private lateinit var list: ArrayList<PastEventModel>
-
-    private fun getPastEvents() {
-        viewModel.responseLiveData.observe(this) {
-        }
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(HomeScreenViewModel::class.java)
-
         setContent {
-
-            list = arrayListOf()
-            getPastEvents()
-
             GDSCIPSATheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),

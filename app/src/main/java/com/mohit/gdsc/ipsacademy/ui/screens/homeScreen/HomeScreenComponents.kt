@@ -1,5 +1,6 @@
 package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.util.Log
@@ -18,12 +19,13 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
+import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -34,8 +36,8 @@ import com.mohit.gdsc.ipsacademy.EventsDetails
 import com.mohit.gdsc.ipsacademy.FutureEventDetails
 import com.mohit.gdsc.ipsacademy.R
 import com.mohit.gdsc.ipsacademy.data.models.PastEventModel
-import com.mohit.gdsc.ipsacademy.data.response.FirebaseCallback
-import com.mohit.gdsc.ipsacademy.data.response.Response
+
+val viewModel = HomeScreenViewModel()
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -50,19 +52,25 @@ fun UpcomingEventsDetailsCard(eventDetails: EventsDetails) {
         backgroundColor = Color.White,
         shape = RoundedCornerShape(corner = CornerSize(16.dp)),
         onClick = {
-            if(!eventDetails.Url.isNullOrBlank()){
+            if (!eventDetails.Url.isNullOrBlank()) {
                 context.startActivity(intent)
             }
         }
 
     ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
-            .height(160.dp)
-            .width(175.dp)) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
+                .height(160.dp)
+                .width(175.dp)
+        ) {
             Spacer(modifier = Modifier.height(25.dp))
-            Image( painter = painterResource(id = eventDetails.ImageId), contentDescription = eventDetails.title, modifier = Modifier
-                .size(60.dp)
-                .padding(horizontal = 10.dp))
+            Image(
+                painter = painterResource(id = eventDetails.ImageId),
+                contentDescription = eventDetails.title,
+                modifier = Modifier
+                    .size(60.dp)
+                    .padding(horizontal = 10.dp)
+            )
             Text(
                 text = eventDetails.title,
                 style = TextStyle(
@@ -85,6 +93,7 @@ fun UpcomingEventsDetailsCard(eventDetails: EventsDetails) {
         }
     }
 }
+
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun FutureEventsDetailsCard(eventDetails: PastEventModel) {
@@ -102,13 +111,19 @@ fun FutureEventsDetailsCard(eventDetails: PastEventModel) {
         }
 
     ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
-            .height(160.dp)
-            .width(175.dp)) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
+                .height(160.dp)
+                .width(175.dp)
+        ) {
             Spacer(modifier = Modifier.height(2.dp))
-            Image( painter = painterResource(R.drawable.composekotlin), contentDescription = eventDetails.title, modifier = Modifier
-                .size(80.dp)
-                .padding(horizontal = 10.dp))
+            Image(
+                painter = painterResource(R.drawable.composekotlin),
+                contentDescription = eventDetails.title,
+                modifier = Modifier
+                    .size(80.dp)
+                    .padding(horizontal = 10.dp)
+            )
             Text(
                 text = eventDetails.title.toString(),
                 style = TextStyle(
@@ -147,26 +162,16 @@ fun FutureEventsDetailsDetailsContent() {
     }
 }
 
-var list:ArrayList<PastEventModel> = arrayListOf()
 
-private fun getResponseUsingCallback() {
-    val viewModel = HomeScreenViewModel()
-    viewModel.getResponseUsingCallback(object : FirebaseCallback {
-        override fun onResponse(response: Response) {
-            print(response)
-            list.addAll(response.pastEventItems!!)
-        }
-    })
-}
-
+@SuppressLint("MutableCollectionMutableState")
 @Composable
 fun PastEventsDetailsDetailsContent() {
 
-    getResponseUsingCallback()
+    var events by remember { mutableStateOf(listOf<PastEventModel>()) }
 
-    Log.e("test", list.toString())
-
-    val events = remember { list }
+    viewModel.pastEvents.observe(LocalLifecycleOwner.current){
+        events = it.pastEventItems!!
+    }
 
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
