@@ -7,6 +7,7 @@ import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -20,9 +21,9 @@ import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
-import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -32,6 +33,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.rememberImagePainter
 import com.mohit.gdsc.ipsacademy.EventsDetails
 import com.mohit.gdsc.ipsacademy.FutureEventDetails
 import com.mohit.gdsc.ipsacademy.R
@@ -47,62 +49,7 @@ fun UpcomingEventsDetailsCard(eventDetails: UpcomingEventModel) {
     val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(eventDetails.eventlink)) }
     Card(
         modifier = Modifier
-            .padding(horizontal = 6.dp, vertical = 5.dp)
-            .padding(2.dp),
-        elevation = 6.dp,
-        backgroundColor = Color.White,
-        shape = RoundedCornerShape(corner = CornerSize(16.dp)),
-        onClick = {
-            if (!eventDetails.eventlink.isNullOrBlank()) {
-                context.startActivity(intent)
-            }
-        }
-
-    ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
-                .height(160.dp)
-                .width(175.dp)
-        ) {
-            Spacer(modifier = Modifier.height(25.dp))
-            Image(
-                painter = painterResource(id = R.drawable.android),
-                contentDescription = eventDetails.title,
-                modifier = Modifier
-                    .size(60.dp)
-                    .padding(horizontal = 10.dp)
-            )
-            Text(
-                text = eventDetails.title.toString(),
-                style = TextStyle(
-                    color = Color.Black,
-                    fontSize = 15.sp,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.Center
-                ),
-                modifier = Modifier.padding(10.dp)
-            )
-            Text(
-                text = eventDetails.date.toString(),
-                style = TextStyle(
-                    color = Color.Black,
-                    fontSize = 15.sp
-                )
-            )
-
-
-        }
-    }
-}
-
-@OptIn(ExperimentalMaterialApi::class)
-@Composable
-fun FutureEventsDetailsCard(eventDetails: PastEventModel) {
-    val context = LocalContext.current
-    val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(eventDetails.eventlink)) }
-    Card(
-        modifier = Modifier
-            .padding(horizontal = 6.dp, vertical = 5.dp)
+            .padding(horizontal = 3.dp, vertical = 5.dp)
             .padding(2.dp),
         elevation = 6.dp,
         backgroundColor = Color.White,
@@ -114,17 +61,17 @@ fun FutureEventsDetailsCard(eventDetails: PastEventModel) {
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
-                .height(160.dp)
-                .width(175.dp)
+                .height(225.dp)
+                .width(225.dp)
         ) {
-            Spacer(modifier = Modifier.height(2.dp))
-            Image(
-                painter = painterResource(R.drawable.composekotlin),
-                contentDescription = eventDetails.title,
-                modifier = Modifier
-                    .size(80.dp)
-                    .padding(horizontal = 10.dp)
-            )
+            Card(elevation = 6.dp , modifier = Modifier.padding(15.dp)) {
+                Image(
+                    painter = rememberImagePainter(eventDetails.posterlink),
+                    contentDescription = eventDetails.title,
+                    modifier = Modifier
+                        .size(125.dp)
+                )
+            }
             Text(
                 text = eventDetails.title.toString(),
                 style = TextStyle(
@@ -133,7 +80,61 @@ fun FutureEventsDetailsCard(eventDetails: PastEventModel) {
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Center
                 ),
-                modifier = Modifier.padding(10.dp)
+                modifier = Modifier.width(150.dp)
+            )
+            Text(
+                text = eventDetails.date.toString(),
+                style = TextStyle(
+                    color = Color.Black,
+                    fontSize = 15.sp
+                )
+            )
+
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterialApi::class)
+@Composable
+fun FutureEventsDetailsCard(eventDetails: PastEventModel) {
+    val context = LocalContext.current
+    val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(eventDetails.eventlink)) }
+
+    Card(
+        modifier = Modifier
+            .padding(horizontal = 3.dp, vertical = 5.dp)
+            .padding(2.dp),
+        elevation = 6.dp,
+        backgroundColor = Color.White,
+        shape = RoundedCornerShape(corner = CornerSize(16.dp)),
+        onClick = {
+            context.startActivity(intent)
+        }
+
+    ) {
+
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
+                .height(225.dp)
+                .width(225.dp)
+        ) {
+            Card(elevation = 6.dp , modifier = Modifier.padding(15.dp)) {
+                Image(
+                    painter = rememberImagePainter(eventDetails.posterlink),
+                    contentDescription = eventDetails.title,
+                    modifier = Modifier
+                        .size(125.dp)
+                )
+            }
+            Text(
+                text = eventDetails.title.toString(),
+                style = TextStyle(
+                    color = Color.Black,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                ),
+                modifier = Modifier.width(150.dp)
             )
             Text(
                 text = eventDetails.date.toString(),
@@ -163,7 +164,7 @@ fun FutureEventsDetailsDetailsContent() {
     }
 
     LazyRow(
-        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp)
     ) {
         items(
             events
@@ -191,7 +192,7 @@ fun PastEventsDetailsDetailsContent() {
     }
 
     LazyRow(
-        contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
+        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp)
     ) {
         items(
             events
