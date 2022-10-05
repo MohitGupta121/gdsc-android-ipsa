@@ -28,14 +28,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mohit.gdsc.ipsacademy.EventsDetails
 import com.mohit.gdsc.ipsacademy.FutureEventDetails
-import com.mohit.gdsc.ipsacademy.PastEventDetails
 import com.mohit.gdsc.ipsacademy.R
 import com.mohit.gdsc.ipsacademy.data.models.PastEventModel
+import com.mohit.gdsc.ipsacademy.data.response.FirebaseCallback
+import com.mohit.gdsc.ipsacademy.data.response.Response
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -147,12 +147,27 @@ fun FutureEventsDetailsDetailsContent() {
     }
 }
 
+var list:ArrayList<PastEventModel> = arrayListOf()
+
+private fun getResponseUsingCallback() {
+    val viewModel = HomeScreenViewModel()
+    viewModel.getResponseUsingCallback(object : FirebaseCallback {
+        override fun onResponse(response: Response) {
+            print(response)
+            list.addAll(response.pastEventItems!!)
+        }
+    })
+}
+
 @Composable
-fun PastEventsDetailsDetailsContent(EventsDetailsLists: ArrayList<PastEventModel>) {
+fun PastEventsDetailsDetailsContent() {
 
-    val events = remember { EventsDetailsLists }
+    getResponseUsingCallback()
 
-//    Log.e("dhadhgd", events[0].title.toString())
+    Log.e("test", list.toString())
+
+    val events = remember { list }
+
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
@@ -163,5 +178,6 @@ fun PastEventsDetailsDetailsContent(EventsDetailsLists: ArrayList<PastEventModel
         }
     }
 }
+
 
 
