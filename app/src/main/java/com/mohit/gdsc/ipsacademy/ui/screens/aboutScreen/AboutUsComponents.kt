@@ -48,19 +48,23 @@ import com.mohit.gdsc.ipsacademy.R
 import com.mohit.gdsc.ipsacademy.data.models.SocialMediaDetails
 import com.mohit.gdsc.ipsacademy.data.models.TechnologyStack
 import com.mohit.gdsc.ipsacademy.data.models.TechnologyStackDetails
-import com.mohit.gdsc.ipsacademy.data.models.socialmedia
+import com.mohit.gdsc.ipsacademy.data.models.SocialMedia
 import com.mohit.gdsc.ipsacademy.ui.theme.GDSCGreen
 
 @Composable
-fun GoogleAnimation(modifier: Modifier = Modifier
-    .fillMaxWidth()
-    .height(200.dp)) {
+fun GoogleAnimation(
+    modifier: Modifier = Modifier
+        .fillMaxWidth()
+        .height(200.dp)
+) {
     val visibility = remember { mutableStateOf(0) }
     val context = LocalContext.current
     val customView = remember { LottieAnimationView(context) }
-    AndroidView({ customView },modifier= Modifier
-        .fillMaxWidth()
-        .height(200.dp)) { view ->
+    AndroidView(
+        { customView }, modifier = Modifier
+            .fillMaxWidth()
+            .height(200.dp)
+    ) { view ->
         with(view) {
             setAnimation(R.raw.google_loading)
             playAnimation()
@@ -69,10 +73,16 @@ fun GoogleAnimation(modifier: Modifier = Modifier
         }
     }
 }
+
 @Composable
-fun CardViewContentAboutUs(){
+fun CardViewContentAboutUs() {
     val context = LocalContext.current
-    val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse("https://gdsc.community.dev/ips-academy-indore/")) }
+    val intent = remember {
+        Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("https://gdsc.community.dev/ips-academy-indore/")
+        )
+    }
     Card(
         modifier = Modifier
             .padding(horizontal = 10.dp)
@@ -94,11 +104,17 @@ fun CardViewContentAboutUs(){
                 textAlign = TextAlign.Justify
             )
             Row(horizontalArrangement = Arrangement.Center, modifier = Modifier.fillMaxWidth()) {
-                Button(onClick = {context.startActivity(intent)},
-                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.White), border = BorderStroke(1.dp,
-                        Color.Blue), modifier = Modifier
+                Button(
+                    onClick = { context.startActivity(intent) },
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
+                    border = BorderStroke(
+                        1.dp,
+                        Color.Blue
+                    ),
+                    modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 15.dp) ) {
+                        .padding(horizontal = 15.dp)
+                ) {
                     Text(text = "Learn More", color = Color.Blue)
                 }
             }
@@ -106,10 +122,16 @@ fun CardViewContentAboutUs(){
 
     }
 }
+
 @Composable
-fun CardViewContentForJoinCommunity(){
+fun CardViewContentForJoinCommunity() {
     val context = LocalContext.current
-    val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse("https://gdsc.community.dev/ips-academy-indore/")) }
+    val intent = remember {
+        Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse("https://gdsc.community.dev/ips-academy-indore/")
+        )
+    }
 
     Card(
         modifier = Modifier
@@ -123,8 +145,11 @@ fun CardViewContentForJoinCommunity(){
 
         ) {
         Column() {
-            Text(text = "Join Our Community", style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold),
-                modifier = Modifier.padding(horizontal = 15.dp, vertical = 15.dp))
+            Text(
+                text = "Join Our Community",
+                style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold),
+                modifier = Modifier.padding(horizontal = 15.dp, vertical = 15.dp)
+            )
             Text(
                 text = "Backed by a community of passionate student developers from across the globe. Get access to all our resources, attend events, work together and connect with other passionate developers.",
                 style = TextStyle(
@@ -134,9 +159,11 @@ fun CardViewContentForJoinCommunity(){
                 textAlign = TextAlign.Justify
             )
             Row(horizontalArrangement = Arrangement.Start) {
-                Button(onClick = {context.startActivity(intent)},
-                    colors = ButtonDefaults.buttonColors(backgroundColor = GDSCGreen)
-                    ,modifier=Modifier.padding(horizontal = 15.dp) ) {
+                Button(
+                    onClick = { context.startActivity(intent) },
+                    colors = ButtonDefaults.buttonColors(backgroundColor = GDSCGreen),
+                    modifier = Modifier.padding(horizontal = 15.dp)
+                ) {
                     Text(text = "BECOME A MEMBER", color = Color.White)
                 }
             }
@@ -146,31 +173,31 @@ fun CardViewContentForJoinCommunity(){
 }
 
 @Composable
-fun GoogleLine(){
-    Row(modifier =Modifier.height(3.dp)) {
+fun GoogleLine() {
+    Row(modifier = Modifier.height(3.dp)) {
 
-        Box (
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()
                 .background(Color.Red)
                 .weight(1f)
         )
-        Box (
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()
                 .background(Color.Blue)
                 .weight(1f)
         )
-        Box (
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()
                 .background(Color.Green)
                 .weight(1f)
         )
-        Box (
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()
@@ -182,7 +209,7 @@ fun GoogleLine(){
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun CardViewContentForTechnologyStack(technologystack: TechnologyStack){
+fun CardViewContentForTechnologyStack(technologystack: TechnologyStack) {
 
     Card(
         modifier = Modifier
@@ -192,14 +219,20 @@ fun CardViewContentForTechnologyStack(technologystack: TechnologyStack){
         elevation = 4.dp,
         backgroundColor = Color.White,
         shape = RoundedCornerShape(corner = CornerSize(15.dp)),
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
+                .height(160.dp)
+                .width(120.dp)
         ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
-            .height(160.dp)
-            .width(120.dp)) {
             Spacer(modifier = Modifier.height(10.dp))
-            Image( painter = painterResource(id = technologystack.image), contentDescription = technologystack.link, modifier = Modifier
-                .size(100.dp)
-                .padding(horizontal = 10.dp))
+            Image(
+                painter = painterResource(id = technologystack.image),
+                contentDescription = technologystack.link,
+                modifier = Modifier
+                    .size(100.dp)
+                    .padding(horizontal = 10.dp)
+            )
             Text(
                 text = technologystack.name,
                 style = TextStyle(
@@ -229,7 +262,7 @@ fun TechnologyStackContent() {
 }
 
 @Composable
-fun EventsWeConduct(){
+fun EventsWeConduct() {
     Spacer(modifier = Modifier.height(5.dp))
     Column(modifier = Modifier.padding(horizontal = 5.dp)) {
         Text(
@@ -295,7 +328,7 @@ fun EventsWeConduct(){
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun SocialCard(socialMedia: socialmedia) {
+fun SocialCard(socialMedia: SocialMedia) {
     val context = LocalContext.current
     val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(socialMedia.link)) }
 
@@ -313,10 +346,15 @@ fun SocialCard(socialMedia: socialmedia) {
 
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Image( painter = painterResource(id = socialMedia.image), contentDescription = socialMedia.link, modifier = Modifier.fillMaxSize())
+            Image(
+                painter = painterResource(id = socialMedia.image),
+                contentDescription = socialMedia.link,
+                modifier = Modifier.fillMaxSize()
+            )
         }
     }
 }
+
 @Composable
 fun SocialMediaContent() {
 

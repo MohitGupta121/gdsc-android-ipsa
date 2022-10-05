@@ -3,12 +3,9 @@ package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -23,20 +20,16 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
-import com.mohit.gdsc.ipsacademy.EventsDetails
-import com.mohit.gdsc.ipsacademy.FutureEventDetails
-import com.mohit.gdsc.ipsacademy.R
 import com.mohit.gdsc.ipsacademy.data.models.PastEventModel
 import com.mohit.gdsc.ipsacademy.data.models.UpcomingEventModel
 
@@ -64,9 +57,9 @@ fun UpcomingEventsDetailsCard(eventDetails: UpcomingEventModel) {
                 .height(225.dp)
                 .width(225.dp)
         ) {
-            Card(elevation = 6.dp , modifier = Modifier.padding(15.dp)) {
+            Card(elevation = 6.dp, modifier = Modifier.padding(15.dp)) {
                 Image(
-                    painter = rememberImagePainter(eventDetails.posterlink),
+                    painter = rememberAsyncImagePainter(eventDetails.thumbnaillink),
                     contentDescription = eventDetails.title,
                     modifier = Modifier
                         .size(125.dp)
@@ -118,9 +111,9 @@ fun FutureEventsDetailsCard(eventDetails: PastEventModel) {
                 .height(225.dp)
                 .width(225.dp)
         ) {
-            Card(elevation = 6.dp , modifier = Modifier.padding(15.dp)) {
+            Card(elevation = 6.dp, modifier = Modifier.padding(15.dp)) {
                 Image(
-                    painter = rememberImagePainter(eventDetails.posterlink),
+                    painter = rememberAsyncImagePainter(eventDetails.thumbnaillink),
                     contentDescription = eventDetails.title,
                     modifier = Modifier
                         .size(125.dp)
