@@ -2,6 +2,7 @@ package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
 
 import android.content.Intent
 import android.net.Uri
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -33,6 +34,8 @@ import androidx.compose.ui.unit.sp
 import com.mohit.gdsc.ipsacademy.EventsDetails
 import com.mohit.gdsc.ipsacademy.FutureEventDetails
 import com.mohit.gdsc.ipsacademy.PastEventDetails
+import com.mohit.gdsc.ipsacademy.R
+import com.mohit.gdsc.ipsacademy.data.models.PastEventModel
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
@@ -84,9 +87,9 @@ fun UpcomingEventsDetailsCard(eventDetails: EventsDetails) {
 }
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun FutureEventsDetailsCard(eventDetails: EventsDetails) {
+fun FutureEventsDetailsCard(eventDetails: PastEventModel) {
     val context = LocalContext.current
-    val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(eventDetails.Url)) }
+    val intent = remember { Intent(Intent.ACTION_VIEW, Uri.parse(eventDetails.eventLink)) }
     Card(
         modifier = Modifier
             .padding(horizontal = 6.dp, vertical = 5.dp)
@@ -103,11 +106,11 @@ fun FutureEventsDetailsCard(eventDetails: EventsDetails) {
             .height(160.dp)
             .width(175.dp)) {
             Spacer(modifier = Modifier.height(2.dp))
-            Image( painter = painterResource(id = eventDetails.ImageId), contentDescription = eventDetails.title, modifier = Modifier
+            Image( painter = painterResource(R.drawable.composekotlin), contentDescription = eventDetails.title, modifier = Modifier
                 .size(80.dp)
                 .padding(horizontal = 10.dp))
             Text(
-                text = eventDetails.title,
+                text = eventDetails.title.toString(),
                 style = TextStyle(
                     color = Color.Black,
                     fontSize = 15.sp,
@@ -117,7 +120,7 @@ fun FutureEventsDetailsCard(eventDetails: EventsDetails) {
                 modifier = Modifier.padding(10.dp)
             )
             Text(
-                text = eventDetails.Date,
+                text = eventDetails.date.toString(),
                 style = TextStyle(
                     color = Color.Black,
                     fontSize = 15.sp
@@ -130,7 +133,7 @@ fun FutureEventsDetailsCard(eventDetails: EventsDetails) {
 }
 
 @Composable
-fun PastEventsDetailsDetailsContent() {
+fun FutureEventsDetailsDetailsContent() {
 
     val events = remember { FutureEventDetails.EventsDetailsLists }
     LazyRow(
@@ -144,11 +147,12 @@ fun PastEventsDetailsDetailsContent() {
     }
 }
 
-@Preview
 @Composable
-fun FutureEventsDetailsDetailsContent() {
+fun PastEventsDetailsDetailsContent(EventsDetailsLists: ArrayList<PastEventModel>) {
 
-    val events = remember { PastEventDetails.EventsDetailsLists }
+    val events = remember { EventsDetailsLists }
+
+//    Log.e("dhadhgd", events[0].title.toString())
     LazyRow(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
     ) {
@@ -159,4 +163,5 @@ fun FutureEventsDetailsDetailsContent() {
         }
     }
 }
+
 
