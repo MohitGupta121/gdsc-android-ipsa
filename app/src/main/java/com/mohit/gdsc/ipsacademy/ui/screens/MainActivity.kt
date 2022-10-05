@@ -10,8 +10,10 @@ import com.mohit.gdsc.ipsacademy.ui.navigation.Navigation
 import com.mohit.gdsc.ipsacademy.ui.theme.GDSCIPSATheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             GDSCIPSATheme {
                 Surface(
@@ -24,4 +26,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-

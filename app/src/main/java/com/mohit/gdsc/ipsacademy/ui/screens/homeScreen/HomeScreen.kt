@@ -25,7 +25,7 @@ fun HomeFragmentUI() {
             ),
             modifier = Modifier.padding(5.dp)
         )
-        PastEventsDetailsDetailsContent()
+        FutureEventsDetailsDetailsContent()
         Text(
             text = "Past Events",
             style = TextStyle(
@@ -33,7 +33,7 @@ fun HomeFragmentUI() {
             ),
             modifier = Modifier.padding(5.dp)
         )
-        FutureEventsDetailsDetailsContent()
+        PastEventsDetailsDetailsContent()
 
     }
 

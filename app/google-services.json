@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "735305956159",
+    "project_id": "gdsc-ipsa",
+    "storage_bucket": "gdsc-ipsa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735305956159:android:89b863a2c25c2e7cbc718a",
+        "android_client_info": {
+          "package_name": "com.mohit.gdsc.ipsacademy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735305956159-fq30fuhun2in4vifg9omro1hq8n2ngsh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mohit.gdsc.ipsacademy",
+            "certificate_hash": "2659f007d0be428da1044f32db0e94542a9b09c3"
+          }
+        },
+        {
+          "client_id": "735305956159-vm460i954hhl6vnmd00dfkbshbisjr9t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVV8Z6veBQ8yt8ySbyz6po01M8ow5vDlA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "735305956159-vm460i954hhl6vnmd00dfkbshbisjr9t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

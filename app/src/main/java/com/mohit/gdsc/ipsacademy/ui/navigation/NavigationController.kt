@@ -40,7 +40,7 @@ fun NavigationController(navController: NavHostController) {
     NavHost(navController = navController, startDestination = NavigationItem.Home.rout) {
 
         composable(NavigationItem.Home.rout) {
-            home()
+            Home()
         }
 
         composable(NavigationItem.AboutUs.rout) {
@@ -158,7 +158,7 @@ fun Navigation() {
 
 
 @Composable
-fun home() {
+fun Home() {
     HomeFragmentUI()
 
 }
