@@ -49,7 +49,6 @@ This project proposes a "Community Android Application" to accumulate all the In
 
 - **Glide + Lottie:** Third-Party Libraries such as Glide is used to load images in the app using URIs as well as Lottie is used to render smooth animations in our app as views from the raw JSON.
 - **MaterialUI by Material.io from Google:** This app follows the Material UI design pattern to implement a minimal UI to provide an enhanced user experience.
-- This app is made using many Android Jetpack Libraries such as the Navigation Component Libraries, Architecture Component Libraries, DataBinding, etc. as well as various external third-party android libraries.
 
 <b> Application Link & Future Scope : </b>
 
