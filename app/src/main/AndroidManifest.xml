@@ -13,6 +13,8 @@
         android:theme="@style/Theme.GDSCIPSA"
         tools:targetApi="31">
         <activity
+            android:name=".ui.screens.CertificateVerificationActivity"></activity>
+        <activity
             android:name=".ui.screens.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
