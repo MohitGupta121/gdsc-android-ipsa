@@ -18,6 +18,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mohit.gdsc.ipsacademy.ui.screens.CertificateVerificationActivity
+import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.GoogleLine
 import com.mohit.gdsc.ipsacademy.ui.theme.GDSCGreen
 
 @Composable
@@ -26,6 +27,7 @@ fun HomeFragmentUI() {
     val mContext = LocalContext.current
 
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+        GoogleLine()
         Text(
             text = "Upcoming Events",
             style = TextStyle(

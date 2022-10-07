@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ContentOfAboutUs() {
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+        GoogleLine()
         GoogleAnimation()
         CardViewContentAboutUs()
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
