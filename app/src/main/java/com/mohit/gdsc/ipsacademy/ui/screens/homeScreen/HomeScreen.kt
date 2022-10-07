@@ -13,10 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mohit.gdsc.ipsacademy.ui.screens.CertificateVerificationActivity
+import com.mohit.gdsc.ipsacademy.ui.theme.GDSCGreen
 
 @Composable
 fun HomeFragmentUI() {
@@ -40,11 +42,11 @@ fun HomeFragmentUI() {
             modifier = Modifier.padding(horizontal = 10.dp)
         )
         PastEventsDetailsDetailsContent()
-        Spacer(modifier = Modifier.height(100.dp))
+        Spacer(modifier = Modifier.height(30.dp))
         Text(
             text = "Verify Certificate",
             style = TextStyle(
-                color =  Color.Black,
+                color = Color.Black,
                 fontSize = 22.sp
             ),
             modifier = Modifier.padding(10.dp)
@@ -59,11 +61,22 @@ fun HomeFragmentUI() {
         )
         Spacer(modifier = Modifier.height(10.dp))
         Row(horizontalArrangement = Arrangement.Center, modifier = Modifier.fillMaxWidth()) {
-            Button(onClick = {
-                mContext.startActivity(Intent(mContext, CertificateVerificationActivity::class.java)) },
-                colors = ButtonDefaults.buttonColors(backgroundColor = Color.White), border = BorderStroke(1.dp,
-                    Color.Green) ) {
-                Text(text = "Certificate Verification", color = Color.Green)
+            Button(
+                onClick = {
+                    mContext.startActivity(
+                        Intent(
+                            mContext,
+                            CertificateVerificationActivity::class.java
+                        )
+                    )
+                },
+                colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
+                border = BorderStroke(
+                    1.dp,
+                    Color.Gray
+                )
+            ) {
+                Text(text = "Certificate Verification", color = GDSCGreen, fontWeight = FontWeight.ExtraBold)
             }
         }
         Spacer(modifier = Modifier.height(100.dp))

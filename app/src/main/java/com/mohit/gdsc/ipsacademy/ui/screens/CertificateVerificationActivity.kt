@@ -33,12 +33,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.mohit.gdsc.ipsacademy.R
+import com.mohit.gdsc.ipsacademy.ui.theme.GDSCGreen
 
-class CertificateVerificationActivity  : ComponentActivity() {
+class CertificateVerificationActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -49,7 +51,7 @@ class CertificateVerificationActivity  : ComponentActivity() {
 
 @Preview
 @Composable
-fun CertificateVerificationUI(){
+fun CertificateVerificationUI() {
 
     Scaffold(topBar = {
 
@@ -84,12 +86,16 @@ fun CertificateVerificationUI(){
 
 @Composable
 fun ActivityContent(paddingValues: PaddingValues) {
-    var textFielState by remember {
+    var textFieldState by remember {
         mutableStateOf("")
     }
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .padding(paddingValues), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(paddingValues),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
         Spacer(modifier = Modifier.height(20.dp))
         Text(
             text = "Enter the verification code mentioned on the certificate.",
@@ -100,10 +106,10 @@ fun ActivityContent(paddingValues: PaddingValues) {
         )
         Spacer(modifier = Modifier.height(10.dp))
         OutlinedTextField(
-            value =textFielState ,
+            value = textFieldState,
             label = { Text(text = "Ex : GDSC00228Z79HKE") },
             onValueChange = {
-                textFielState= it
+                textFieldState = it
             },
             singleLine = true,
             modifier = Modifier
@@ -113,20 +119,23 @@ fun ActivityContent(paddingValues: PaddingValues) {
             shape = RoundedCornerShape(8.dp)
         )
         Spacer(modifier = Modifier.height(10.dp))
-        Button(onClick = {
-                         verifyCertificate(textFielState)
-        }, colors = ButtonDefaults.buttonColors(backgroundColor = Color.White), border = BorderStroke(1.dp, Color.Green),
+        Button(
+            onClick = {
+                verifyCertificate(textFieldState)
+            },
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.White),
+            border = BorderStroke(1.dp, Color.Gray),
         ) {
-            Text(text = "verify", color = Color.Green)
+            Text(text = "VERIFY", color = GDSCGreen, fontWeight = FontWeight.ExtraBold)
         }
     }
 
 }
 
 fun verifyCertificate(textFielState: String) {
-if(textFielState.isEmpty()){
-    return
-}
+    if (textFielState.isEmpty()) {
+        return
+    }
 }
 
 @Composable

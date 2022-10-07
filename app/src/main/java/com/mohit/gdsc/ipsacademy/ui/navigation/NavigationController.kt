@@ -34,7 +34,6 @@ import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.ContentOfAboutUs
 import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.GoogleLine
 import com.mohit.gdsc.ipsacademy.ui.screens.homeScreen.HomeFragmentUI
 
-
 @Composable
 fun NavigationController(navController: NavHostController) {
     NavHost(navController = navController, startDestination = NavigationItem.Home.rout) {
@@ -162,7 +161,6 @@ fun Home() {
     HomeFragmentUI()
 
 }
-
 
 @Composable
 fun aboutUs() {
