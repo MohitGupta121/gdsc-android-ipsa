@@ -2,7 +2,6 @@ package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -32,7 +31,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import com.mohit.gdsc.ipsacademy.data.models.PastEventModel
 import com.mohit.gdsc.ipsacademy.data.models.UpcomingEventModel
-import com.mohit.gdsc.ipsacademy.ui.screens.EventDetails.EventDetail
+import com.mohit.gdsc.ipsacademy.ui.screens.eventDetails.EventDetail
 
 val viewModel = HomeScreenViewModel()
 
@@ -40,15 +39,15 @@ val viewModel = HomeScreenViewModel()
 @Composable
 fun UpcomingEventsDetailsCard(eventDetails: UpcomingEventModel) {
     val context = LocalContext.current
-    val intent = Intent(context,EventDetail::class.java)
-    intent.putExtra("eventname",eventDetails.title)
-    intent.putExtra("eventposter",eventDetails.posterlink)
-    intent.putExtra("eventtime",eventDetails.time)
-    intent.putExtra("eventdate",eventDetails.date)
-    intent.putExtra("eventmode",eventDetails.mode)
-    intent.putExtra("eventlink",eventDetails.eventlink)
-    intent.putExtra("eventdesc",eventDetails.shortdesc)
-    intent.putExtra("eventtickets",eventDetails.ticketlink)
+    val intent = Intent(context, EventDetail::class.java)
+    intent.putExtra("eventname", eventDetails.title)
+    intent.putExtra("eventposter", eventDetails.posterlink)
+    intent.putExtra("eventtime", eventDetails.time)
+    intent.putExtra("eventdate", eventDetails.date)
+    intent.putExtra("eventmode", eventDetails.mode)
+    intent.putExtra("eventlink", eventDetails.eventlink)
+    intent.putExtra("eventdesc", eventDetails.shortdesc)
+    intent.putExtra("eventtickets", eventDetails.ticketlink)
 
 
     Card(
@@ -68,12 +67,13 @@ fun UpcomingEventsDetailsCard(eventDetails: UpcomingEventModel) {
                 .height(175.dp)
                 .width(200.dp)
         ) {
-            Card(elevation = 3.dp , modifier = Modifier.padding(15.dp)) {
+            Card(elevation = 3.dp, modifier = Modifier.padding(15.dp)) {
                 Image(
                     painter = rememberAsyncImagePainter(eventDetails.thumbnaillink),
                     contentDescription = eventDetails.title,
                     modifier = Modifier
-                        .size(80.dp).clip(RoundedCornerShape(20.dp))
+                        .size(80.dp)
+                        .clip(RoundedCornerShape(20.dp))
                 )
             }
             Text(
@@ -102,15 +102,15 @@ fun UpcomingEventsDetailsCard(eventDetails: UpcomingEventModel) {
 @Composable
 fun PastEventsDetailsCard(eventDetails: PastEventModel) {
     val context = LocalContext.current
-    val intent = Intent(context,EventDetail::class.java)
-    intent.putExtra("eventname",eventDetails.title)
-    intent.putExtra("eventposter",eventDetails.posterlink)
-    intent.putExtra("eventtime",eventDetails.time)
-    intent.putExtra("eventdate",eventDetails.date)
-    intent.putExtra("eventmode",eventDetails.mode)
-    intent.putExtra("eventlink",eventDetails.eventlink)
-    intent.putExtra("eventdesc",eventDetails.shortdesc)
-    intent.putExtra("eventtickets",eventDetails.eventlink)
+    val intent = Intent(context, EventDetail::class.java)
+    intent.putExtra("eventname", eventDetails.title)
+    intent.putExtra("eventposter", eventDetails.posterlink)
+    intent.putExtra("eventtime", eventDetails.time)
+    intent.putExtra("eventdate", eventDetails.date)
+    intent.putExtra("eventmode", eventDetails.mode)
+    intent.putExtra("eventlink", eventDetails.eventlink)
+    intent.putExtra("eventdesc", eventDetails.shortdesc)
+    intent.putExtra("eventtickets", eventDetails.eventlink)
 
     Card(
         modifier = Modifier
@@ -130,12 +130,13 @@ fun PastEventsDetailsCard(eventDetails: PastEventModel) {
                 .height(175.dp)
                 .width(200.dp)
         ) {
-            Card(elevation = 3.dp , modifier = Modifier.padding(15.dp)) {
+            Card(elevation = 3.dp, modifier = Modifier.padding(15.dp)) {
                 Image(
                     painter = rememberAsyncImagePainter(eventDetails.thumbnaillink),
                     contentDescription = eventDetails.title,
                     modifier = Modifier
-                        .size(80.dp).clip(RoundedCornerShape(20.dp))
+                        .size(80.dp)
+                        .clip(RoundedCornerShape(20.dp))
                 )
             }
             Text(
@@ -213,6 +214,3 @@ fun PastEventsDetailsDetailsContent() {
         }
     }
 }
-
-
-
