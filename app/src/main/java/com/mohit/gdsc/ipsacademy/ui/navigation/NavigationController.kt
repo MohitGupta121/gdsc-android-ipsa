@@ -96,7 +96,6 @@ fun Navigation() {
                     Row(modifier = Modifier.padding(vertical = 3.dp)) {
                         Text(text = "IPS Academy Indore", fontSize = 15.sp, color = Color.Black)
                     }
-                    GoogleLine()
                 }
 
 
