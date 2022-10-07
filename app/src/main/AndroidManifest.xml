@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GDSCIPSA"
         tools:targetApi="31">
+        <activity android:name=".ui.screens.CertificateVerificationActivity" />
         <activity
             android:name=".ui.screens.MainActivity"
             android:exported="true"
