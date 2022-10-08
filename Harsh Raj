@@ -1,0 +1,13 @@
+class ComposeUIFragment : Fragment() {
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return ComposeView(requireContext()).apply {
+            setContent {
+                Text(text = "Hacktoberfesr 2022")
+            }
+        }
+    }
+}
