@@ -31,7 +31,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.mohit.gdsc.ipsacademy.R
 import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.ContentOfAboutUs
-import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.GoogleLine
 import com.mohit.gdsc.ipsacademy.ui.screens.homeScreen.HomeFragmentUI
 
 @Composable
@@ -41,18 +40,14 @@ fun NavigationController(navController: NavHostController) {
         composable(NavigationItem.Home.rout) {
             Home()
         }
-
         composable(NavigationItem.AboutUs.rout) {
-            aboutUs()
+            AboutUs()
         }
-
         composable(NavigationItem.Team.rout) {
-            team()
+            Team()
         }
 
     }
-
-
 }
 
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
@@ -68,9 +63,7 @@ fun Navigation() {
     )
 
     Scaffold(
-
         topBar = {
-
             TopAppBar(backgroundColor = Color.White, modifier = Modifier
                 .height(80.dp)
                 .fillMaxWidth(), title = {
@@ -97,8 +90,6 @@ fun Navigation() {
                         Text(text = "IPS Academy Indore", fontSize = 15.sp, color = Color.Black)
                     }
                 }
-
-
             })
         },
         bottomBar = {
@@ -107,13 +98,20 @@ fun Navigation() {
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route
 
+                val hue = 240F
+                val sat = 1F
+                val lightness = .5F
 
                 items.forEach {
                     BottomNavigationItem(selected = currentRoute == it.rout,
                         label = {
                             Text(
                                 text = it.label,
-                                color = if (currentRoute == it.rout) Color.DarkGray else Color.LightGray
+                                color = if (currentRoute == it.rout) Color.hsl(
+                                    hue,
+                                    sat,
+                                    lightness
+                                ) else Color.LightGray
                             )
                         },
                         icon = {
@@ -122,7 +120,7 @@ fun Navigation() {
                                 contentDescription = it.label
                             )
                         },
-                        selectedContentColor = Color.Green,
+                        selectedContentColor = Color.hsl(hue, sat, lightness),
                         unselectedContentColor = Color.Black.copy(0.4f),
 
                         onClick = {
@@ -135,25 +133,15 @@ fun Navigation() {
                                 navController.navigate(it.rout) {
                                     launchSingleTop = true
                                 }
-
                             }
-
                         })
-
                 }
 
-
             }
-
-
         }) {
-
         NavigationController(navController = navController)
-
     }
-
 }
-
 
 @Composable
 fun Home() {
@@ -161,12 +149,12 @@ fun Home() {
 }
 
 @Composable
-fun aboutUs() {
+fun AboutUs() {
     ContentOfAboutUs()
 }
 
 @Composable
-fun team() {
+fun Team() {
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
