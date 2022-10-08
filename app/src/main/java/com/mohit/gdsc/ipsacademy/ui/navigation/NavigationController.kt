@@ -109,13 +109,17 @@ fun Navigation() {
                 val navBackStackEntry by navController.currentBackStackEntryAsState()
                 val currentRoute = navBackStackEntry?.destination?.route
 
+                
+                val hue = 240F
+                val sat = 1F
+                val lightness = .5F
 
                 items.forEach {
                     BottomNavigationItem(selected = currentRoute == it.rout,
                         label = {
                             Text(
                                 text = it.label,
-                                color = if (currentRoute == it.rout) Color.DarkGray else Color.LightGray
+                                color = if (currentRoute == it.rout) Color.hsl(hue, sat, lightness) else Color.LightGray
                             )
                         },
                         icon = {
@@ -124,7 +128,7 @@ fun Navigation() {
                                 contentDescription = it.label
                             )
                         },
-                        selectedContentColor = Color.Green,
+                        selectedContentColor = Color.hsl(hue, sat, lightness),
                         unselectedContentColor = Color.Black.copy(0.4f),
 
                         onClick = {
