@@ -158,7 +158,6 @@ fun Navigation() {
 @Composable
 fun Home() {
     HomeFragmentUI()
-
 }
 
 @Composable

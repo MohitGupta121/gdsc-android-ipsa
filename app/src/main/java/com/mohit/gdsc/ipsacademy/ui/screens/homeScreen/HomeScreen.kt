@@ -78,7 +78,11 @@ fun HomeFragmentUI() {
                     Color.Gray
                 )
             ) {
-                Text(text = "Certificate Verification", color = GDSCGreen, fontWeight = FontWeight.ExtraBold)
+                Text(
+                    text = "Certificate Verification",
+                    color = GDSCGreen,
+                    fontWeight = FontWeight.ExtraBold
+                )
             }
         }
         Spacer(modifier = Modifier.height(100.dp))
