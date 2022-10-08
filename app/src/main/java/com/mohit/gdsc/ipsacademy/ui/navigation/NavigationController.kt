@@ -34,13 +34,12 @@ import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.ContentOfAboutUs
 import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.GoogleLine
 import com.mohit.gdsc.ipsacademy.ui.screens.homeScreen.HomeFragmentUI
 
-
 @Composable
 fun NavigationController(navController: NavHostController) {
     NavHost(navController = navController, startDestination = NavigationItem.Home.rout) {
 
         composable(NavigationItem.Home.rout) {
-            home()
+            Home()
         }
 
         composable(NavigationItem.AboutUs.rout) {
@@ -97,7 +96,6 @@ fun Navigation() {
                     Row(modifier = Modifier.padding(vertical = 3.dp)) {
                         Text(text = "IPS Academy Indore", fontSize = 15.sp, color = Color.Black)
                     }
-                    GoogleLine()
                 }
 
 
@@ -162,11 +160,9 @@ fun Navigation() {
 
 
 @Composable
-fun home() {
+fun Home() {
     HomeFragmentUI()
-
 }
-
 
 @Composable
 fun aboutUs() {

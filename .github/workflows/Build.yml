@@ -1,7 +1,10 @@
 name: Build
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ develop ]
+  
+  pull_request:
+    branches: [ develop ]
 
 jobs:
   build_apk:

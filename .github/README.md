@@ -21,7 +21,6 @@ This project proposes a "Community Android Application" to accumulate all the In
 ![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/kotlin-%230095D5.svg?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
-
     	  	
 # <b> Functionality & Concepts used : </b>
 
@@ -48,7 +47,6 @@ This project proposes a "Community Android Application" to accumulate all the In
 
 - **Glide + Lottie:** Third-Party Libraries such as Glide is used to load images in the app using URIs as well as Lottie is used to render smooth animations in our app as views from the raw JSON.
 - **MaterialUI by Material.io from Google:** This app follows the Material UI design pattern to implement a minimal UI to provide an enhanced user experience.
-- This app is made using many Android Jetpack Libraries such as the Navigation Component Libraries, Architecture Component Libraries, DataBinding, etc. as well as various external third-party android libraries.
 
 <b> Application Link & Future Scope : </b>
 
@@ -58,10 +56,12 @@ This project proposes a "Community Android Application" to accumulate all the In
 
 - We are currently discussing all the possible features that can be Implemented in this community app, in the coming months we will be adding many more functionalities to this application.
 
-- For any discussions related to this project, [Join our Discord Server]()
+- For any discussions related to this project, [Join our Discord Server](https://discord.gg/9AnpSSjs)
 
 
-<h2>Contributors:</h2>
+<h2>Contributors:</h2> 
+
+* **[Contributors Wiki](https://github.com/MohitGupta121/gdsc-android-ipsa/blob/develop/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct)**
 
 ## Thanks to all the contributors ❤️
 
