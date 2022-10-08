@@ -1,0 +1,13 @@
+Import ...
+public class MainActivity extends AppCompatActivity {
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+       super.onCreate(savedInstanceState);
+       setContentView(R.layout.activity main);
+       if (android.os.Build…VERSION.SDK_ INT ›= Build.VERSION CODES.LOLLIPOP) {
+           getWindow (). setNavigationBarColor (getResources (). getColor (R.class));
+       }
+    }
+}   
