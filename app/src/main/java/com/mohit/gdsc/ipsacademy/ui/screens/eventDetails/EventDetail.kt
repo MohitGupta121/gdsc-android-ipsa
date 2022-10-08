@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.LocalOnBackPressedDispatcherOwner
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
@@ -21,6 +22,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.IconButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
@@ -28,6 +30,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -65,6 +68,8 @@ class EventDetail : ComponentActivity() {
 @Composable
 fun EventDetailsUI(eventDetail: UpcomingEventModel) {
 
+    val dispatcher = LocalOnBackPressedDispatcherOwner.current!!.onBackPressedDispatcher
+
     Scaffold(topBar = {
 
         TopAppBar(backgroundColor = Color.White, modifier = Modifier.height(80.dp), title = {
@@ -87,9 +92,18 @@ fun EventDetailsUI(eventDetail: UpcomingEventModel) {
                     Text(text = "IES-IPS Academy Indore", fontSize = 15.sp, color = Color.Black)
                 }
             }
-
-
-        })
+        },
+            navigationIcon =
+            {
+                IconButton(onClick = { dispatcher.onBackPressed() }) {
+                    Image(
+                        painter = painterResource(id = R.drawable.ic_back_button),
+                        contentDescription = "Back",
+                        colorFilter = ColorFilter.tint(Color.Red)
+                    )
+                }
+            }
+        )
     }, content = {
         EventDetailsActivityContent(it, eventDetail)
     })
