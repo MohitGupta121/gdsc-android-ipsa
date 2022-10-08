@@ -83,7 +83,7 @@ fun CertificateVerificationUI() {
             }
 
 
-        },navigationIcon =
+        }, navigationIcon =
         {
             IconButton(onClick = { dispatcher.onBackPressed() }) {
                 Image(
@@ -92,7 +92,7 @@ fun CertificateVerificationUI() {
                     colorFilter = ColorFilter.tint(Color.Red)
                 )
             }
-        } )
+        })
     }, content = {
         ActivityContent(it)
     })
@@ -148,21 +148,8 @@ fun ActivityContent(paddingValues: PaddingValues) {
 
 }
 
-fun verifyCertificate(textFielState: String) {
-    if (textFielState.isEmpty()) {
+fun verifyCertificate(textFieldState: String) {
+    if (textFieldState.isEmpty()) {
         return
-    }
-}
-
-@Composable
-fun Body() {
-    Column(
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.White)
-    ) {
-        Text(text = "Body Content", color = Color(0xFF0F9D58))
     }
 }
