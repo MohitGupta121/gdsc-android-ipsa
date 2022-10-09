@@ -4,9 +4,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import kotlinx.coroutines.Dispatchers
 
-class HomeScreenViewModel (
+class HomeScreenViewModel(
     private val repository: HomeScreenRepository = HomeScreenRepository()
-): ViewModel() {
+) : ViewModel() {
 
     val pastEvents = liveData(Dispatchers.IO) {
         emit(repository.fetchPastEvents())

@@ -2,10 +2,10 @@
 
 Community App of Google Developer Student Club @ IPSA
 
-<!--[![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)-->
+[![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/MohitGupta121/gdsc-android-ipsa?style=social)](https://github.com/MohitGupta121/gdsc-android-ipsa/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/MohitGupta121/gdsc-android-ipsa?style=social)](https://github.com/MohitGupta121/gdsc-android-ipsa/network/members)
-
+<!--
 <b> Problem Statement: </b>
 
 Getting Information and all the resource related to Google Developer Student Club IPS Academy and all the Events, Hackathons, etc. that we conduct gets complicated as Information and resources are divided on multiple platforms such as the DSC Community Website, WhatsApp Group of GDSC IPSA, Discord Server of GDSC IPSA, GitHub Org of GDSC IPSA, YouTube channel of GDSC IPSA and so on. Specific Technologies can be used to Implement a solution to ease the process and concentrate all the Information related to GDSC IPSA on a single platform.
@@ -14,10 +14,9 @@ Getting Information and all the resource related to Google Developer Student Clu
 
 This project proposes a "Community Android Application" to accumulate all the Information and Resources related to our developer community here at GDSC IPSA in one single Android Application, which will make it a one-stop destination for all community members to access all the resources from one single platform rather than searching over all our social media handles and web-pages.
 
- * [Contributors' wiki](https://github.com/MohitGupta121/gdsc-android-ipsa/blob/develop/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct)
-
 <!--<img width="700" alt="sampleimages" src="https://cdn.discordapp.com/attachments/881638762877177858/930102135998263316/unknown.png">
 <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/D0TXpAEVitRAJO4SKkBNttqbP9VKE-qCijFL8aMihVbIzhOeQVYY8__GwgnN23_FCJh7=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/N-ZEC3FDJC_nC9B5RDs06YI8S0UrIVvBuxnKkDokNtQzkJHUXT0svwYm--MVlYSSMw=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/0cKOYOfXJfaJ0TdNDYsr5p6wb6-4UrQYG1XJJn67YUL_YZSjTg5_1ST8HHTLvR8x9IE=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/FUfJxnoPn0yybqMcVOmLLFTA78LH9MHzC9lKSL9HdcnfaWJCUIttc53KKcpuw7HLUpM=w1920-h929-rw">-->
+
 
 ## Technology Stack Used :
 ![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white)
@@ -49,20 +48,21 @@ This project proposes a "Community Android Application" to accumulate all the In
 
 - **Glide + Lottie:** Third-Party Libraries such as Glide is used to load images in the app using URIs as well as Lottie is used to render smooth animations in our app as views from the raw JSON.
 - **MaterialUI by Material.io from Google:** This app follows the Material UI design pattern to implement a minimal UI to provide an enhanced user experience.
-- This app is made using many Android Jetpack Libraries such as the Navigation Component Libraries, Architecture Component Libraries, DataBinding, etc. as well as various external third-party android libraries.
 
 <b> Application Link & Future Scope : </b>
 
 - Download the app from [Google Play Store](https://play.google.com/store/apps/details?id=)
 
 <!--- The app is in the Alpha stage current and is being tested, discussed and developed by the student developers here at GDSC IPSA, the app will be released to the Google Play Store as soon as it's ready for the Beta Release. For now, the app can be downloaded from : [CLICK HERE](https://github.com/DSC-PHCET/gdsc-android-app/releases/download/v1.0.0-alpha/gdsc-phcet-alpha-1.0.0.apk)-->
-
+<!--
 - We are currently discussing all the possible features that can be Implemented in this community app, in the coming months we will be adding many more functionalities to this application.
 
 - For any discussions related to this project, [Join our Discord Server](https://discord.gg/9AnpSSjs)
 
 
-<h2>Contributors:</h2>
+<h2>Contributors:</h2> 
+
+* **[Contributors Wiki](https://github.com/MohitGupta121/gdsc-android-ipsa/blob/develop/CODE_OF_CONDUCT.md#contributor-covenant-code-of-conduct)**
 
 ## Thanks to all the contributors ❤️
 
