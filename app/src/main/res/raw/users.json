@@ -1,139 +1,109 @@
 {
   "lead": {
-    "name": "Lead Example Person 3",
-    "description": "The boss of the bosses",
-    "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set6",
+    "name": "Mohit Gupta",
+    "description": "GDSC Lead",
+    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/lets-chat-5dd7a.appspot.com/o/1619613081452.jfif?alt=media&token=c1b0c7ce-3576-43e1-af20-1a1e94e05d88",
     "links": [
       {
-        "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-        "link": "www.facebook.com"
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+        "link": "http://www.facebook.com"
       },
       {
         "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-        "link": "www.linkedin.com"
+        "link": "https://www.linkedin.com/in/mohitgupta121/"
       }
     ]
   },
   "seniors": [
     {
-      "name": "Senior Example Person 1",
-      "description": "The boss of the bosses",
-      "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set1",
+      "name": "Ismail Bohra",
+      "description": "Android",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/lets-chat-5dd7a.appspot.com/o/WhatsApp%20Image%202022-09-23%20at%203.05.53%20PM.jpeg?alt=media&token=26eb4c45-66ea-41ca-91a2-32927803bda1",
       "links": [
         {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-          "link": "www.facebook.com"
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+          "link": "https://www.instagram.com/ismail_bohra7112/"
         },
         {
           "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-          "link": "www.linkedin.com"
+          "link": "https://www.linkedin.com/in/ismail-bohra-2387641b9/"
         }
       ]
     },
     {
-      "name": "Senior Example Person 2",
-      "description": "The boss of the bosses",
-      "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set2",
+      "name": "Om Aditya Jain",
+      "description": "Web-Dev",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/lets-chat-5dd7a.appspot.com/o/1637117995115.jfif?alt=media&token=505e8c1d-6c18-48f9-b099-6e8bc8c647f0",
       "links": [
         {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-          "link": "www.facebook.com"
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+          "link": "https://www.instagram.com/om_aditya_jain/"
         },
         {
           "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-          "link": "www.linkedin.com"
+          "link": "https://www.linkedin.com/in/om-aditya-jain-108174222/"
         }
       ]
     },
     {
-      "name": "Senior Example Person 3",
-      "description": "The boss of the bosses",
-      "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set3",
+      "name": "Yash Parmar",
+      "description": "Web-Dev",
+      "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D03AQHU_fvUA83F1Q/profile-displayphoto-shrink_400_400/0/1633417058173?e=1671062400&v=beta&t=9jPLXfDcjeahHqaiaWCy6xQS7uzEC9zg8843k467qV0",
       "links": [
         {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-          "link": "www.facebook.com"
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+          "link": "https://www.instagram.com/yashpsct010/"
         },
         {
           "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-          "link": "www.linkedin.com"
+          "link": "https://www.linkedin.com/in/yash-parmar-394460222/"
         }
       ]
     },
     {
-      "name": "Senior Example Person 4",
-      "description": "The boss of the bosses",
-      "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set4",
+      "name": "Shashank",
+      "description": "Block-Chain",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/lets-chat-5dd7a.appspot.com/o/WhatsApp%20Image%202022-10-10%20at%2011.56.50%20PM.jpeg?alt=media&token=e594eff1-285a-4fe8-bf2d-9cfafd72b709",
       "links": [
         {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-          "link": "www.facebook.com"
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+          "link": "http://instagram.com/shashank_ig"
         },
         {
           "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-          "link": "www.linkedin.com"
+          "link": "https://www.linkedin.com/in/shashank1302/"
         }
       ]
     }
   ],
   "juniors": [
     {
-      "name": "Junior Example Person 1",
-      "description": "The boss of the bosses",
-      "imageUrl": "https://robohash.org/party.png?size=150x150",
+      "name": "Sneha Sanu",
+      "description": "Content Writer",
+      "imageUrl": "https://instagram.frpr1-1.fna.fbcdn.net/v/t51.2885-19/227663097_183769337000812_5258195146534013538_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.frpr1-1.fna.fbcdn.net&_nc_cat=104&_nc_ohc=EAbAlGoTJoUAX_iKgVw&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AT-tYScbcwrEU3kX6ARyuzoC_zipny4_1tQtBHff_Uzogw&oe=634C1515&_nc_sid=8fd12b",
       "links": [
         {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-          "link": "www.facebook.com"
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+          "link": "https://www.instagram.com/sneha01mathew/"
         },
         {
           "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-          "link": "www.linkedin.com"
+          "link": "https://www.linkedin.com/in/sneha-sanu-mathew-b4b597245/"
         }
       ]
     },
     {
-      "name": "Junior Example Person 2",
-      "description": "The boss of the bosses",
-      "imageUrl": "https://robohash.org/silly.png?size=150x150",
+      "name": "Nisha Jangid",
+      "description": "Design",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/lets-chat-5dd7a.appspot.com/o/Untitled.png?alt=media&token=996b4011-e206-4992-bafa-580de1188d6b",
       "links": [
         {
           "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-          "link": "www.facebook.com"
+          "link": "www.instagram.com"
         },
         {
           "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-          "link": "www.linkedin.com"
-        }
-      ]
-    },
-    {
-      "name": "Junior Example Person 3",
-      "description": "The boss of the bosses",
-      "imageUrl": "https://robohash.org/example.png?size=150x150",
-      "links": [
-        {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-          "link": "www.facebook.com"
-        },
-        {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-          "link": "www.linkedin.com"
-        }
-      ]
-    },
-    {
-      "name": "Junior Example Person 4",
-      "description": "The boss of the bosses",
-      "imageUrl": "https://robohash.org/test.png?size=150x150",
-      "links": [
-        {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
-          "link": "www.facebook.com"
-        },
-        {
-          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
-          "link": "www.linkedin.com"
+          "link": "https://www.linkedin.com/in/nisha-jangid-695543227/"
         }
       ]
     }
