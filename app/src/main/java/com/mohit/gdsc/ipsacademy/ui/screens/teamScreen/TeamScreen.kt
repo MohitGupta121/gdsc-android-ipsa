@@ -143,12 +143,12 @@ fun SingleUserCard(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = rememberAsyncImagePainter(image),
-                contentDescription = null,
                 modifier = Modifier
                     .size(96.dp)
                     .clip(CircleShape)
-                    .border(width = 1.dp, color = Color.Black, shape = CircleShape)
+                    .border(width = 1.dp, color = Color.Black, shape = CircleShape),
+                painter = rememberAsyncImagePainter(image),
+                contentDescription = null
             )
             Text(
                 text = name,
@@ -180,11 +180,11 @@ fun SingleUserCard(
 @Composable
 fun SimpleIcon(imageUrl: String) {
     Image(
-        painter = rememberAsyncImagePainter(imageUrl),
-        contentDescription = null,
         modifier = Modifier
             .size(32.dp)
-            .clip(RoundedCornerShape(2.dp))
+            .clip(RoundedCornerShape(2.dp)),
+        painter = rememberAsyncImagePainter(imageUrl),
+        contentDescription = null
     )
 }
 
