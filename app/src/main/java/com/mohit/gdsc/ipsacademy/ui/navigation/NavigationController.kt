@@ -32,6 +32,7 @@ import androidx.navigation.compose.rememberNavController
 import com.mohit.gdsc.ipsacademy.R
 import com.mohit.gdsc.ipsacademy.ui.screens.aboutScreen.ContentOfAboutUs
 import com.mohit.gdsc.ipsacademy.ui.screens.homeScreen.HomeFragmentUI
+import com.mohit.gdsc.ipsacademy.ui.screens.teamScreen.TeamScreen
 
 @Composable
 fun NavigationController(navController: NavHostController) {
@@ -155,11 +156,5 @@ fun AboutUs() {
 
 @Composable
 fun Team() {
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(text = "Team")
-    }
+    TeamScreen()
 }

@@ -1,0 +1,141 @@
+{
+  "lead": {
+    "name": "Lead Example Person 3",
+    "description": "The boss of the bosses",
+    "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set6",
+    "links": [
+      {
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+        "link": "www.facebook.com"
+      },
+      {
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+        "link": "www.linkedin.com"
+      }
+    ]
+  },
+  "seniors": [
+    {
+      "name": "Senior Example Person 1",
+      "description": "The boss of the bosses",
+      "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set1",
+      "links": [
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+          "link": "www.facebook.com"
+        },
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+          "link": "www.linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "Senior Example Person 2",
+      "description": "The boss of the bosses",
+      "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set2",
+      "links": [
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+          "link": "www.facebook.com"
+        },
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+          "link": "www.linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "Senior Example Person 3",
+      "description": "The boss of the bosses",
+      "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set3",
+      "links": [
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+          "link": "www.facebook.com"
+        },
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+          "link": "www.linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "Senior Example Person 4",
+      "description": "The boss of the bosses",
+      "imageUrl": "https://robohash.org/hicveldicta.png?size=150x150&set=set4",
+      "links": [
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+          "link": "www.facebook.com"
+        },
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+          "link": "www.linkedin.com"
+        }
+      ]
+    }
+  ],
+  "juniors": [
+    {
+      "name": "Junior Example Person 1",
+      "description": "The boss of the bosses",
+      "imageUrl": "https://robohash.org/party.png?size=150x150",
+      "links": [
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+          "link": "www.facebook.com"
+        },
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+          "link": "www.linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "Junior Example Person 2",
+      "description": "The boss of the bosses",
+      "imageUrl": "https://robohash.org/silly.png?size=150x150",
+      "links": [
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+          "link": "www.facebook.com"
+        },
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+          "link": "www.linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "Junior Example Person 3",
+      "description": "The boss of the bosses",
+      "imageUrl": "https://robohash.org/example.png?size=150x150",
+      "links": [
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+          "link": "www.facebook.com"
+        },
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+          "link": "www.linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "Junior Example Person 4",
+      "description": "The boss of the bosses",
+      "imageUrl": "https://robohash.org/test.png?size=150x150",
+      "links": [
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/124/124010.png",
+          "link": "www.facebook.com"
+        },
+        {
+          "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
+          "link": "www.linkedin.com"
+        }
+      ]
+    }
+  ]
+}
