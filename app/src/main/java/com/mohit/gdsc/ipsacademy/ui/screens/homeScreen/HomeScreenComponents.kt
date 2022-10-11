@@ -2,9 +2,11 @@ package com.mohit.gdsc.ipsacademy.ui.screens.homeScreen
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.view.Gravity
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -26,9 +28,14 @@ import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.viewinterop.AndroidView
 import coil.compose.rememberAsyncImagePainter
+import com.airbnb.lottie.LottieAnimationView
+import com.airbnb.lottie.LottieDrawable
+import com.mohit.gdsc.ipsacademy.R
 import com.mohit.gdsc.ipsacademy.data.models.PastEventModel
 import com.mohit.gdsc.ipsacademy.data.models.UpcomingEventModel
 import com.mohit.gdsc.ipsacademy.ui.screens.eventDetails.EventDetail
@@ -53,7 +60,8 @@ fun UpcomingEventsDetailsCard(eventDetails: UpcomingEventModel) {
     Card(
         modifier = Modifier
             .padding(horizontal = 5.dp, vertical = 5.dp)
-            .padding(2.dp),
+            .padding(2.dp)
+            .fillMaxWidth(),
         elevation = 6.dp,
         backgroundColor = Color.White,
         shape = RoundedCornerShape(corner = CornerSize(16.dp)),
@@ -96,6 +104,7 @@ fun UpcomingEventsDetailsCard(eventDetails: UpcomingEventModel) {
 
         }
     }
+
 }
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -164,25 +173,53 @@ fun PastEventsDetailsCard(eventDetails: PastEventModel) {
 @Composable
 fun FutureEventsDetailsDetailsContent() {
 
-    /*
-    Also Use
-    var events = viewModel.pastEvents.observeAsState()  [we have to pass there list as response]
-    with this line 178-180 into 1 line 176
-    */
+    val context = LocalContext.current
 
     var events by remember { mutableStateOf(listOf<UpcomingEventModel>()) }
 
     viewModel.upcomingEvents.observe(LocalLifecycleOwner.current) {
         events = it.upcomingEventItems!!
     }
-
-    LazyRow(
-        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp)
-    ) {
-        items(
-            events
+    if (events != null) {
+        LazyRow(
+            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp)
         ) {
-            UpcomingEventsDetailsCard(eventDetails = it)
+            items(
+                events
+            ) {
+                UpcomingEventsDetailsCard(eventDetails = it)
+            }
+        }
+    } else {
+        EmptyEventPlaceholder()
+    }
+}
+
+@Composable
+private fun EmptyEventPlaceholder() {
+    Card(
+        modifier = Modifier
+            .padding(horizontal = 5.dp, vertical = 5.dp)
+            .padding(2.dp),
+        elevation = 6.dp,
+        backgroundColor = Color.White,
+        shape = RoundedCornerShape(corner = CornerSize(16.dp))
+
+    ) {
+        val visibility = remember { mutableStateOf(0) }
+        val context = LocalContext.current
+        val customView = remember { LottieAnimationView(context) }
+        AndroidView(
+            { customView }, modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
+        ) { view ->
+            with(view) {
+                setAnimation(R.raw.searching_lottie)
+                playAnimation()
+                repeatMode = LottieDrawable.RESTART
+                foregroundGravity = Gravity.CENTER
+            }
         }
     }
 }
@@ -211,6 +248,41 @@ fun PastEventsDetailsDetailsContent() {
             events
         ) {
             PastEventsDetailsCard(eventDetails = it)
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterialApi::class)
+@Preview
+@Composable
+fun view() {
+    val context = LocalContext.current
+    Card(
+        modifier = Modifier
+            .padding(horizontal = 5.dp, vertical = 5.dp)
+            .padding(2.dp),
+        elevation = 6.dp,
+        backgroundColor = Color.White,
+        shape = RoundedCornerShape(corner = CornerSize(16.dp)),
+        onClick = {
+
+        }
+
+    ) {
+        val visibility = remember { mutableStateOf(0) }
+        val context = LocalContext.current
+        val customView = remember { LottieAnimationView(context) }
+        AndroidView(
+            { customView }, modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
+        ) { view ->
+            with(view) {
+                setAnimation(R.raw.searching_lottie)
+                playAnimation()
+                repeatMode = LottieDrawable.RESTART
+                foregroundGravity = Gravity.CENTER
+            }
         }
     }
 }
