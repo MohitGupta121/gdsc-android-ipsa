@@ -1,7 +1,10 @@
 package com.mohit.gdsc.ipsacademy.ui.screens.teamScreen
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -83,7 +86,7 @@ fun TeamScreen() {
         }
         item(span = { GridItemSpan(2) }) {
             Text(
-                text = "GDSC Senior Core Team",
+                text = "GDSC Technical Core Team",
                 style = TextStyle(
                     fontSize = 20.sp,
                     textAlign = TextAlign.Center
@@ -103,7 +106,7 @@ fun TeamScreen() {
         }
         item(span = { GridItemSpan(2) }) {
             Text(
-                text = "GDSC Junior Core Team",
+                text = "GDSC Non-Technical Core Team",
                 style = TextStyle(
                     fontSize = 20.sp,
                     textAlign = TextAlign.Center
@@ -169,8 +172,8 @@ fun SingleUserCard(
             Spacer(modifier = Modifier.height(8.dp))
             Row {
                 listOfLinks.forEach {
-                    SimpleIcon(it.imageUrl)
-                    Spacer(Modifier.width(2.dp))
+                    SimpleIcon(it.imageUrl, it.link)
+                    Spacer(Modifier.width(4.dp))
                 }
             }
         }
@@ -178,11 +181,21 @@ fun SingleUserCard(
 }
 
 @Composable
-fun SimpleIcon(imageUrl: String) {
+fun SimpleIcon(imageUrl: String, link: String) {
+
+    val context = LocalContext.current
+    val intent = remember {
+        Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse(link)
+        )
+    }
+
     Image(
         modifier = Modifier
             .size(32.dp)
-            .clip(RoundedCornerShape(2.dp)),
+            .clip(RoundedCornerShape(2.dp))
+            .clickable { context.startActivity(intent) },
         painter = rememberAsyncImagePainter(imageUrl),
         contentDescription = null
     )
