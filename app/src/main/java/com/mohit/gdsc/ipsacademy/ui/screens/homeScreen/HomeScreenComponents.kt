@@ -39,6 +39,7 @@ import com.mohit.gdsc.ipsacademy.R
 import com.mohit.gdsc.ipsacademy.data.models.PastEventModel
 import com.mohit.gdsc.ipsacademy.data.models.UpcomingEventModel
 import com.mohit.gdsc.ipsacademy.ui.screens.eventDetails.EventDetail
+import java.lang.Exception
 
 val viewModel = HomeScreenViewModel()
 
@@ -180,7 +181,8 @@ fun FutureEventsDetailsDetailsContent() {
     viewModel.upcomingEvents.observe(LocalLifecycleOwner.current) {
         events = it.upcomingEventItems!!
     }
-    if (events != null) {
+
+    if (events.isNotEmpty()) {
         LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp)
         ) {
