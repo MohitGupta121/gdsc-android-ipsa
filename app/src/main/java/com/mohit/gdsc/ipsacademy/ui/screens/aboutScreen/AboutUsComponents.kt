@@ -66,7 +66,7 @@ fun GoogleAnimation(
             .height(200.dp)
     ) { view ->
         with(view) {
-            setAnimation(R.raw.google_loading)
+            setAnimation(R.raw.searching_lottie)
             playAnimation()
             repeatMode = LottieDrawable.RESTART
             foregroundGravity = Gravity.CENTER
