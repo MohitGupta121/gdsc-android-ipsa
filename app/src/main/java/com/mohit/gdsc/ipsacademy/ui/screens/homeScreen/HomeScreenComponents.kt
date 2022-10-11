@@ -57,52 +57,53 @@ fun UpcomingEventsDetailsCard(eventDetails: UpcomingEventModel) {
     intent.putExtra("eventtickets", eventDetails.ticketlink)
 
 
-        Card(
-            modifier = Modifier
-                .padding(horizontal = 5.dp, vertical = 5.dp)
-                .padding(2.dp).fillMaxWidth(),
-            elevation = 6.dp,
-            backgroundColor = Color.White,
-            shape = RoundedCornerShape(corner = CornerSize(16.dp)),
-            onClick = {
-                context.startActivity(intent)
-            }
-
-        ) {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
-                    .height(175.dp)
-                    .width(200.dp)
-            ) {
-                Card(elevation = 3.dp, modifier = Modifier.padding(15.dp)) {
-                    Image(
-                        painter = rememberAsyncImagePainter(eventDetails.thumbnaillink),
-                        contentDescription = eventDetails.title,
-                        modifier = Modifier
-                            .size(80.dp)
-                            .clip(RoundedCornerShape(20.dp))
-                    )
-                }
-                Text(
-                    text = eventDetails.title.toString(),
-                    style = TextStyle(
-                        color = Color.Black,
-                        fontSize = 15.sp,
-                        fontWeight = FontWeight.Bold,
-                        textAlign = TextAlign.Center
-                    ),
-                    modifier = Modifier.width(150.dp)
-                )
-                Text(
-                    text = eventDetails.date.toString(),
-                    style = TextStyle(
-                        color = Color.Black,
-                        fontSize = 15.sp
-                    )
-                )
-
-            }
+    Card(
+        modifier = Modifier
+            .padding(horizontal = 5.dp, vertical = 5.dp)
+            .padding(2.dp)
+            .fillMaxWidth(),
+        elevation = 6.dp,
+        backgroundColor = Color.White,
+        shape = RoundedCornerShape(corner = CornerSize(16.dp)),
+        onClick = {
+            context.startActivity(intent)
         }
+
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier
+                .height(175.dp)
+                .width(200.dp)
+        ) {
+            Card(elevation = 3.dp, modifier = Modifier.padding(15.dp)) {
+                Image(
+                    painter = rememberAsyncImagePainter(eventDetails.thumbnaillink),
+                    contentDescription = eventDetails.title,
+                    modifier = Modifier
+                        .size(80.dp)
+                        .clip(RoundedCornerShape(20.dp))
+                )
+            }
+            Text(
+                text = eventDetails.title.toString(),
+                style = TextStyle(
+                    color = Color.Black,
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = TextAlign.Center
+                ),
+                modifier = Modifier.width(150.dp)
+            )
+            Text(
+                text = eventDetails.date.toString(),
+                style = TextStyle(
+                    color = Color.Black,
+                    fontSize = 15.sp
+                )
+            )
+
+        }
+    }
 
 }
 
@@ -172,14 +173,14 @@ fun PastEventsDetailsCard(eventDetails: PastEventModel) {
 @Composable
 fun FutureEventsDetailsDetailsContent() {
 
-   val context= LocalContext.current
+    val context = LocalContext.current
 
     var events by remember { mutableStateOf(listOf<UpcomingEventModel>()) }
 
     viewModel.upcomingEvents.observe(LocalLifecycleOwner.current) {
         events = it.upcomingEventItems!!
     }
-    if(events != null) {
+    if (events != null) {
         LazyRow(
             contentPadding = PaddingValues(horizontal = 10.dp, vertical = 8.dp)
         ) {
@@ -189,29 +190,35 @@ fun FutureEventsDetailsDetailsContent() {
                 UpcomingEventsDetailsCard(eventDetails = it)
             }
         }
-    }else{
-        Card(
-            modifier = Modifier
-                .padding(horizontal = 5.dp, vertical = 5.dp)
-                .padding(2.dp),
-            elevation = 6.dp,
-            backgroundColor = Color.White,
-            shape = RoundedCornerShape(corner = CornerSize(16.dp))
+    } else {
+        EmptyEventPlaceholder()
+    }
+}
 
-        ) {
-            val visibility = remember { mutableStateOf(0) }
-            val context = LocalContext.current
-            val customView = remember { LottieAnimationView(context) }
-            AndroidView(
-                { customView }, modifier = Modifier.fillMaxWidth()
-                    .height(200.dp)
-            ) { view ->
-                with(view) {
-                    setAnimation(R.raw.searching_lottie)
-                    playAnimation()
-                    repeatMode = LottieDrawable.RESTART
-                    foregroundGravity = Gravity.CENTER
-                }
+@Composable
+private fun EmptyEventPlaceholder() {
+    Card(
+        modifier = Modifier
+            .padding(horizontal = 5.dp, vertical = 5.dp)
+            .padding(2.dp),
+        elevation = 6.dp,
+        backgroundColor = Color.White,
+        shape = RoundedCornerShape(corner = CornerSize(16.dp))
+
+    ) {
+        val visibility = remember { mutableStateOf(0) }
+        val context = LocalContext.current
+        val customView = remember { LottieAnimationView(context) }
+        AndroidView(
+            { customView }, modifier = Modifier
+                .fillMaxWidth()
+                .height(200.dp)
+        ) { view ->
+            with(view) {
+                setAnimation(R.raw.searching_lottie)
+                playAnimation()
+                repeatMode = LottieDrawable.RESTART
+                foregroundGravity = Gravity.CENTER
             }
         }
     }
@@ -248,7 +255,7 @@ fun PastEventsDetailsDetailsContent() {
 @OptIn(ExperimentalMaterialApi::class)
 @Preview
 @Composable
-fun view(){
+fun view() {
     val context = LocalContext.current
     Card(
         modifier = Modifier
