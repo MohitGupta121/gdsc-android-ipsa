@@ -172,7 +172,7 @@ fun SingleUserCard(
             Spacer(modifier = Modifier.height(8.dp))
             Row {
                 listOfLinks.forEach {
-                    SimpleIcon(it.imageUrl,it.link)
+                    SimpleIcon(it.imageUrl, it.link)
                     Spacer(Modifier.width(4.dp))
                 }
             }
@@ -183,7 +183,7 @@ fun SingleUserCard(
 @Composable
 fun SimpleIcon(imageUrl: String, link: String) {
 
-    val context= LocalContext.current
+    val context = LocalContext.current
     val intent = remember {
         Intent(
             Intent.ACTION_VIEW,
@@ -195,8 +195,7 @@ fun SimpleIcon(imageUrl: String, link: String) {
         modifier = Modifier
             .size(32.dp)
             .clip(RoundedCornerShape(2.dp))
-            .clickable { context.startActivity(intent)  }
-        ,
+            .clickable { context.startActivity(intent) },
         painter = rememberAsyncImagePainter(imageUrl),
         contentDescription = null
     )

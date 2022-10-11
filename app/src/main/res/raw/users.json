@@ -6,11 +6,19 @@
     "links": [
       {
         "imageUrl": "https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
-        "link": "http://www.facebook.com"
+        "link": "https://instagram.com/guptawebnet"
       },
       {
         "imageUrl": "https://cdn-icons-png.flaticon.com/512/174/174857.png",
         "link": "https://www.linkedin.com/in/mohitgupta121/"
+      },
+      {
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/25/25657.png",
+        "link": "https://www.github.com/MohitGupta121/"
+      },
+      {
+        "imageUrl": "https://cdn-icons-png.flaticon.com/512/3670/3670151.png",
+        "link": "https://twitter.com/Mohit_Gupta121"
       }
     ]
   },
