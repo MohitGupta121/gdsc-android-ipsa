@@ -14,8 +14,8 @@ Getting Information and all the resource related to Google Developer Student Clu
 
 This project proposes a "Community Android Application" to accumulate all the Information and Resources related to our developer community here at GDSC IPSA in one single Android Application, which will make it a one-stop destination for all community members to access all the resources from one single platform rather than searching over all our social media handles and web-pages.
 
-<img width="700" alt="sampleimages" src="https://cdn.discordapp.com/attachments/881638762877177858/930102135998263316/unknown.png">
-<img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/D0TXpAEVitRAJO4SKkBNttqbP9VKE-qCijFL8aMihVbIzhOeQVYY8__GwgnN23_FCJh7=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/N-ZEC3FDJC_nC9B5RDs06YI8S0UrIVvBuxnKkDokNtQzkJHUXT0svwYm--MVlYSSMw=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/0cKOYOfXJfaJ0TdNDYsr5p6wb6-4UrQYG1XJJn67YUL_YZSjTg5_1ST8HHTLvR8x9IE=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/FUfJxnoPn0yybqMcVOmLLFTA78LH9MHzC9lKSL9HdcnfaWJCUIttc53KKcpuw7HLUpM=w1920-h929-rw">
+<!--<img width="700" alt="sampleimages" src="https://cdn.discordapp.com/attachments/881638762877177858/930102135998263316/unknown.png">
+<img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/D0TXpAEVitRAJO4SKkBNttqbP9VKE-qCijFL8aMihVbIzhOeQVYY8__GwgnN23_FCJh7=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/N-ZEC3FDJC_nC9B5RDs06YI8S0UrIVvBuxnKkDokNtQzkJHUXT0svwYm--MVlYSSMw=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/0cKOYOfXJfaJ0TdNDYsr5p6wb6-4UrQYG1XJJn67YUL_YZSjTg5_1ST8HHTLvR8x9IE=w1920-h929-rw"> <img width="230" alt="sampleimages" src="https://play-lh.googleusercontent.com/FUfJxnoPn0yybqMcVOmLLFTA78LH9MHzC9lKSL9HdcnfaWJCUIttc53KKcpuw7HLUpM=w1920-h929-rw">-->
 
 
 ## Technology Stack Used :
