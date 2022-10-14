@@ -8,7 +8,7 @@ Community App of Google Developer Student Club @ IPS Acacdemy
 
 # Application Install
 
-***You can Install and test latest MusicX app from below 👇***
+***You can Install and test latest GDSC IPS Academy app from below 👇***
 
 [![GDSC](https://img.shields.io/badge/GDSCIPSA✅-APK-red.svg?style=for-the-badge&logo=android)](https://github.com/MohitGupta121/gdsc-android-ipsa/releases/download/V1/GDSCIPSAV1.apk)
 
@@ -50,17 +50,17 @@ This project proposes a "Community Android Application" to accumulate all the In
 ## Concepts used in the app :
 
 - **GDSC IPSA** uses all Jetpack libraries and follows MVVM architecture.
-
-- **JetPack Compose UI:** Jetpack Compose is Android’s modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Quickly bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
-- **Navigation Component Library + SafeArgs Plugin (Android Jetpack):** Navigation Libraries are used to make navigating throughout the app easier, using navGraph with destinations and safeArgs to pass data between destinations with type safety.
-- **LiveData, ViewModel + Room DB (Android Jetpack):** LiveData, Room and ViewModels such as EventDetailViewModel and AboutViewModel are used to make the architecture of the app more robust and scalable by making sure data survives configuration changes of user devices, all data gathering and model objects are present inside ViewModels.
-
-- **Firebase RealtimeDatabase:** Google's Firebase is used as the online Backend Database to retrieve most of the data from, such as the Event Details as well as the Data for Verified Certificates issued by GDSC IPSA.
-- **DataBinding + LiveData:** DataBinding is used along with LiveData to connect Views with Data as a 2-way connection, and make sure the data on the screen changes if the data is updated in the Database.
-- **BottomNavigationView:** BottomNavigationView is implemented using navController of the NavigationGraph to easily navigate between the 3 Fragments AboutFragment, HomeFragment and TeamFragment.
-
-- **Glide + Lottie:** Third-Party Libraries such as Glide is used to load images in the app using URIs as well as Lottie is used to render smooth animations in our app as views from the raw JSON.
-- **MaterialUI by Material.io from Google:** This app follows the Material UI design pattern to implement a minimal UI to provide an enhanced user experience.
+- **JetPack Compose UI**: Jetpack Compose is Android’s modern toolkit for building native UI. It simplifies and accelerates UI development on Android. Quickly bring your app to life with less code, powerful tools, and intuitive Kotlin APIs.
+- **Flow** : A cold asynchronous data stream that sequentially emits values and completes normally or with an exception.
+- **State handling** : Compose is declarative and as such the only way to update it is by calling the same composable with new arguments. By using this concept we created responsive UI for over app in this project
+- **Coroutines** - For asynchronous and more.
+- **Android Architecture Components** - Collection of libraries that help you design robust, testable, and maintainable apps. 
+    - **ViewModel** - Stores UI-related data that isn't destroyed on UI changes.
+- **Firebase RealtimeDatabase:** Google's Firebase is used as the online Backend Database to retrieve most of the data from, such as the Event Details as well as the Data for Verified Certificates issued by GDSC IPS Academy.
+- **GSON Converter** - A Converter which uses Moshi for serialization to and from JSON.
+- **BottomNavigationView:** It is implemented using Compose Navigation to easily navigate between the 3 Screens About, Home and Team.
+- **Glide + Lottie:** Third-Party Libraries such as Glide are used to load images in the app using URIs as well as Lottie is used to render smooth animations in our app as views from the raw JSON.
+- **Material Components for Android** - Modular and customizable Material Design UI components for Android.
 
 <b> Future Scope : </b>
 
