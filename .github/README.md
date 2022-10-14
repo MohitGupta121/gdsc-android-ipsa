@@ -14,12 +14,13 @@ Getting Information and all the resource related to Google Developer Student Clu
 
 This project proposes a "Community Android Application" to accumulate all the Information and Resources related to our developer community here at GDSC IPSA in one single Android Application, which will make it a one-stop destination for all community members to access all the resources from one single platform rather than searching over all our social media handles and web-pages.
 
+
 ## 📸 Screenshots
 
 |||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |:-----------------------------------------: |
-| ![](media/screen_1.png) | ![](media/screen_2.png) | ![](media/screen_3.png) | ![](media/screen_4.png) |
-| ![](media/screen_5.png) | ![](media/screen_6.png) | ![](media/screen_6.png) | ![](media/screen_6.png) |
+| ![](../media/screen_1.png) | ![](../media/screen_8.png) | ![](../media/screen_2.png) | ![](../media/screen_7.png) |
+| ![](../media/screen_4.png) | ![](../media/screen_5.png) | ![](../media/screen_6.png) | ![](../media/screen_3.png) |
 
 
 ## Technology Stack Used :
