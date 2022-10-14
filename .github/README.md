@@ -10,7 +10,7 @@ Community App of Google Developer Student Club @ IPS Acacdemy
 
 ***You can Install and test latest GDSC IPS Academy app from below 👇***
 
-[![GDSC](https://img.shields.io/badge/GDSCIPSA✅-APK-red.svg?style=for-the-badge&logo=android)](https://github.com/MohitGupta121/gdsc-android-ipsa/releases/download/V1/GDSCIPSAV1.apk)
+[![GDSC](https://img.shields.io/badge/GDSCIPSA✅-APK-red.svg?style=for-the-badge&logo=android)](https://github.com/MohitGupta121/gdsc-android-ipsa/releases/download/V1/GDSC-IPSA-APP.apk)
 
 <b> Problem Statement: </b>
 
