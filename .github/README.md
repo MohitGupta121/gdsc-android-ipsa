@@ -10,7 +10,7 @@ Community App of Google Developer Student Club @ IPSA
 
 ***You can Install and test latest MusicX app from below 👇***
 
-[![GDSC](https://img.shields.io/badge/GDSCIPSA✅-APK-red.svg?style=for-the-badge&logo=android)]()
+[![GDSC](https://img.shields.io/badge/GDSCIPSA✅-APK-red.svg?style=for-the-badge&logo=android)](https://github.com/MohitGupta121/gdsc-android-ipsa/releases/download/V1/GDSCIPSAV1.apk)
 
 <b> Problem Statement: </b>
 
