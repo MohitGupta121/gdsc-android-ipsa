@@ -1,6 +1,6 @@
 # Compose Camp (ANDROID STUDY JAMS)
 
-Community App of Google Developer Student Club @ IPSA
+Community App of Google Developer Student Club @ IPS Acacdemy
 
 [![GitHub license](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/MohitGupta121/gdsc-android-ipsa?style=social)](https://github.com/MohitGupta121/gdsc-android-ipsa/stargazers)
